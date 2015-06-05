@@ -1,0 +1,29 @@
+#header{
+	color: #FFF;
+	background-color: #380B61;
+	box-shadow: 0 0 -5px #000;
+}
+
+#logo{
+	float: left;
+}
+
+#langMenu{
+	float: right;
+}
+#langMenu li{
+	display: inline;
+}
+
+#menuItems {
+	position: absolute;
+	list-style:none;
+	white-space: nowrap;
+}
+#menuItems li{
+	display: inline;
+}
+
+.clear {
+	clear: both;		
+}
