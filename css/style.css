@@ -58,6 +58,7 @@ body {
 
 	.philosopher {
 		position: absolute;
+		transform: rotate(0deg);
 	}
 .clear {
 	clear: both;		

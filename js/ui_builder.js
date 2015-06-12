@@ -55,6 +55,18 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$(".philosopher").css({
+		height: function(){
+			return(pageHeight / 7);
+		},
+		left: function(){
+				return ((pageWidth-$(this).width())/2);
+		},
+		top: function(){
+				return headerHeight * 1.5;
+		},
+	});
+
 	$("#table").css({
 		width: function(){
 			return (table = pageWidth*(3/10));
@@ -64,43 +76,16 @@ jQuery(document).ready(function($){
 		},
 		top: function(){
 			/* metade do complemento do valor escolhido para height */
-			return pageHeight*(1.1/10);
+			return ((pageHeight-$(this).height())/2) + $(".philosopher").height()*0.3;
 		}
 	});
 
-	$(".philosopher").css({
-		height: function(){
-			return(table*0.3);
-		},
-		left: function(){	
-				return (pageWidth*0.5 -$(this).width()/2);
-		},
-		top: function(){	
-				return (table*1.28 -$(this).width()/2);
-		}
-	});
-		$(".left").css({
-			left: function(){	
-				return ((pageWidth/2-table/2)*0.94-$(this).width()/2);
-			}
+	$(".philosopher").css({"transform-origin":""+(50)+"% "+(298)+"%"});
+	$("#phi1").css({"transform":"rotate("+0+"deg)"});
+	$("#phi2").css({"transform":"rotate("+72+"deg)"});
+	$("#phi3").css({"transform":"rotate("+144+"deg)"});
+	$("#phi4").css({"transform":"rotate("+216+"deg)"});
+	$("#phi5").css({"transform":"rotate("+288+"deg)"});
 
-		});
-
-		$(".right").css({
-			left: function(){	
-				return (pageWidth/2+table/2)*0.98;
-			}
-		});
-		$(".top").css({
-			top: function(){	
-				return (table*0.25 -$(this).width()/2);
-			}
-		});
-		
-		$(".bottom").css({
-			top: function(){	
-				return (table*0.95 -$(this).width()/2);
-			}
-		});
 
 });
