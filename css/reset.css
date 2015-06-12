@@ -27,7 +27,9 @@ var{
 	padding: 0;
 	border: 0;
 	outline: 0;
-	vertical-align: top; }
+	vertical-align: top; 
+	text-decoration: none;
+	}
 
 ol, ul {
 	list-style: none;

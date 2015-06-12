@@ -1,29 +1,64 @@
+body {
+	overflow-x:hidden;
+}
 #header{
 	color: #FFF;
 	background-color: #380B61;
-	box-shadow: 0 0 -5px #000;
+	box-shadow: inset 0 0 10px #2E0854;
 }
+	
+	/* id img logo */
+	#logo{
+		float: left;
 
-#logo{
-	float: left;
-}
+	}
 
-#langMenu{
-	float: right;
-}
-#langMenu li{
-	display: inline;
-}
+	#menuItems {
+		position: absolute;
+		list-style:none;
+		white-space: nowrap;
+	}
+	
+		#menuItems li{
+			display: inline;
+			line-height: 200%;
+			border-right:1px solid #fff;
+			padding-right: 5%;
+		}
+			#menuItems li:nth-last-child(1) {	
+				border-right: none;
+			}
 
-#menuItems {
-	position: absolute;
-	list-style:none;
-	white-space: nowrap;
-}
-#menuItems li{
-	display: inline;
-}
+			#menuItems li a{
+				color:white;
+				opacity: 0.85;	
 
+			}
+
+			#menuItems li a:hover {
+				opacity: 1.0;
+			}
+
+
+	#langMenu{
+		float: right;
+	}
+		#langMenu li{
+			display: inline;
+		}	
+
+#content {
+	width: 100%;
+	margin:0;
+}			
+	
+	#table {
+		position:absolute;
+	}
+
+	.philosopher {
+		position: absolute;
+	}
 .clear {
 	clear: both;		
 }
