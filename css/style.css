@@ -55,12 +55,20 @@ body {
 	
 	#table {
 		position:absolute;
+		z-index: 0;
 	}
 
 	.philosopher {
 		position: absolute;
 		transform: rotate(0deg);
+		z-index: -1;
 	}
+	.tableware, .dish, .hashi {
+		position: absolute;
+		transform: rotate(0deg);
+		z-index: 1;
+	}
+
 .clear {
 	clear: both;		
 }
