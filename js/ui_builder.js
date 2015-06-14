@@ -120,14 +120,17 @@ jQuery(document).ready(function($){
         },
     });
 
-    $("#next").css({
-    	padding: function(){
-    		return philosopherWidth/3;
+    $("#next, #prev").css({
+    	width: function(){
+    		return philosopherWidth/2;
+    	},
+    	height: function(){
+    		return philosopherWidth/2;	
     	}
     });
-    $("#prev").css({
 
-    });
+      $("#next").css("left",pageWidth*(5.4/7));
+      $("#prev").css("left",pageWidth*(5.1/7));
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
