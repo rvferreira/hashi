@@ -57,6 +57,7 @@ function statesInit(){
 }
 
 function next() {
+    console.log("printf "+ $("#tb1").width() +" "+$("#tb1").height());
     unsetFrame(currentFrame++);
     setFrame(currentFrame);
 }

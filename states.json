@@ -5,8 +5,14 @@
       "highlighted": true,
       "highlightTarget": "phi0",
       "invisibleElements": [
-        "table"
-      ]
+
+      ],
+      "invisibleClasses":[
+
+      ],
+      "textonScreen": "true",
+      "englishFrameText": "This is the intro",
+      "portugueseFrameText": "This is the intro"
     },
 
     {
@@ -15,6 +21,9 @@
       "highlightTarget": "none",
       "invisibleElements": [
         "phi2"
+      ],
+      "invisibleClasses":[
+
       ]
     }
 

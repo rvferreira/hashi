@@ -63,42 +63,62 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	var philosopherHeight = (pageHeight / 5);
+	var philosopherWidth = philosopherHeight * 224 / 300;
+
 	$(".philosopher").css({
 		height: function(){
-			return(pageHeight / 5);
+			return philosopherHeight;
 		},
 		left: function(){
-				return ((pageWidth-$(this).width())/2);
+				return ((pageWidth-philosopherWidth)/2);
 		},
 		top: function(){
 				return headerHeight * 1.3;
 		},
 	});
 
+	var tableDiameter = (pageHeight*(6/10));
+
 	$("#table").css({
 		height: function(){
-			return (pageHeight*(6/10));
+			return tableDiameter;
 		},
 		left: function(){
-			return (pageWidth-$(this).width())/2;
+			return (pageWidth-tableDiameter)/2;
 		},
 		top: function(){
 			/* metade do complemento do valor escolhido para height */
-			return ((pageHeight-$(this).height())/2) + $(".philosopher").height()*0.3;
+			return ((pageHeight-tableDiameter)/2) + philosopherHeight*0.35;
 		}
 	});
 
-	$(".tableware > img").css({
+    var tablewareHeight = (pageHeight / 8.8);
+    var tablewareWidth = tablewareHeight * 1.0;
+
+	$(".dish").css({
 		height: function(){
-			return(pageHeight / 8.8);
+			return tablewareHeight;
 		},	
 		left: function(){
-				return ((pageWidth-$(this).width())/2);
+				return ((pageWidth-tablewareHeight)/2);
 		},
 		top: function(){
 				return headerHeight * 2.7;
 		},
 	});
+
+	$(".hashi").css({
+        height: function(){
+            return tablewareHeight;
+        },
+        left: function(){
+                return ((pageWidth-tablewareHeight/20)/2);
+        },
+        top: function(){
+                return headerHeight * 2.7;
+        },
+    });
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
