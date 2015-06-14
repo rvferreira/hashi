@@ -19,6 +19,11 @@ function setObjectListInvisible(objList){
 function unsetFrame(index){
     setObjectListVisible(jsonObj.states[index].invisibleElements);
     console.log("Saindo de :" + index);
+
+    if (jsonObj.states[index].highlighted) {
+        setObjectListInvisible(["#cover"]);
+        $(""+jsonObj.states[index].highlightTarget).removeClass("focus");
+    }
 }
 
 function setFrame(index){
@@ -47,6 +52,11 @@ function setFrame(index){
     }
     setObjectListInvisible(jsonObj.states[index].invisibleElements);
     console.log("Para :" + index);
+
+    if (jsonObj.states[index].highlighted) {
+        setObjectListVisible(["#cover"]);
+        $(""+jsonObj.states[index].highlightTarget).addClass("focus");
+    }
 }
 
 function statesInit(){
