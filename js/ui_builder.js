@@ -129,8 +129,9 @@ jQuery(document).ready(function($){
     	}
     });
 
-      $("#next").css("left",pageWidth*(5.4/7));
-      $("#prev").css("left",pageWidth*(5.1/7));
+    var nav_button_left = pageWidth*(5.1/7);
+    $("#prev").css("left",nav_button_left);
+    $("#next").css("left",(nav_button_left+(philosopherWidth/2))*1.005);
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
