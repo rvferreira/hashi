@@ -139,7 +139,7 @@ jQuery(document).ready(function($){
 	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
 	$(".phi3, #tb3 > img").css({"transform":"rotate("+144+"deg)"});
 	$(".phi4, #tb4 > img").css({"transform":"rotate("+216+"deg)"});
-	$(".phi5, #tb1 > img").css({"transform":"rotate("+288+"deg)"});
+	$(".phi5, #tb5 > img").css({"transform":"rotate("+288+"deg)"});
 
 
 	$("#hs1").css({"transform":"rotate("+(0+HASHI_ANGLE_OFFSET)+"deg)"});
