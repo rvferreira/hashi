@@ -1,22 +1,20 @@
 {
   "states":[
     {
-      "state-name": "Intro",
-      "state-index": 0,
+      "stateName": "Intro",
       "highlighted": true,
-      "highlight-target": "phi0",
-      "invisible-elements": [
-        "philosophers", "table"
+      "highlightTarget": "phi0",
+      "invisibleElements": [
+        "table"
       ]
     },
 
     {
-      "state-name": "Table Presentation",
-      "state-index": 1,
+      "stateName": "Table Presentation",
       "highlighted": false,
-      "highlight-target": "none",
-      "invisible-elements": [
-        "philosophers", "table"
+      "highlightTarget": "none",
+      "invisibleElements": [
+        "phi2"
       ]
     }
 

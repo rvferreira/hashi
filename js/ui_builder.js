@@ -1,5 +1,6 @@
 HEADER_HEIGHT = 0.08;
-HASHI = 35;
+HASHI_ANGLE_OFFSET = 35;
+
 var pageWidth;
 var pageHeight;
 var headerHeight;
@@ -7,9 +8,7 @@ var table;
 
 jQuery(document).ready(function($){
 
-	$.getJSON( "./states.json", function( json ) {
-      console.log( "JSON Data: " + json.states[0].state-name );
-     });
+    statesInit();
 
 	pageWidth = window.innerWidth;
 
@@ -111,10 +110,10 @@ jQuery(document).ready(function($){
 	$("#phi5, #tb1 > img").css({"transform":"rotate("+288+"deg)"});
 
 
-	$("#hs1").css({"transform":"rotate("+(0+HASHI)+"deg)"});
-	$("#hs2").css({"transform":"rotate("+(72+HASHI)+"deg)"});
-	$("#hs3").css({"transform":"rotate("+(144+HASHI)+"deg)"});
-	$("#hs4").css({"transform":"rotate("+(216+HASHI)+"deg)"});
-	$("#hs5").css({"transform":"rotate("+(288+HASHI)+"deg)"});
+	$("#hs1").css({"transform":"rotate("+(0+HASHI_ANGLE_OFFSET)+"deg)"});
+	$("#hs2").css({"transform":"rotate("+(72+HASHI_ANGLE_OFFSET)+"deg)"});
+	$("#hs3").css({"transform":"rotate("+(144+HASHI_ANGLE_OFFSET)+"deg)"});
+	$("#hs4").css({"transform":"rotate("+(216+HASHI_ANGLE_OFFSET)+"deg)"});
+	$("#hs5").css({"transform":"rotate("+(288+HASHI_ANGLE_OFFSET)+"deg)"});
 
 });
