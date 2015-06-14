@@ -5,7 +5,21 @@
       "highlighted": true,
       "highlightTarget": "phi0",
       "invisibleElements": [
-        "table"
+        ".hungry",
+        ".eating"
+      ],
+      "textonScreen": "true",
+      "englishFrameText": "This is the intro",
+      "portugueseFrameText": "This is the intro"
+    },
+
+    {
+      "stateName": "Table Presentation",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".thinking",
+        ".eating"
       ]
     },
 
@@ -14,7 +28,8 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        "phi2"
+        ".thinking",
+        ".hungry"
       ]
     }
 
