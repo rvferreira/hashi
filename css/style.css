@@ -135,6 +135,7 @@ body {
 
 	.sim_nav:hover {
 		opacity: 1;
+		cursor: pointer;
 	}
 
 	.tableware, .dish, .hashi {
