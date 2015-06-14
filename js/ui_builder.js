@@ -1,14 +1,23 @@
 HEADER_HEIGHT = 0.08;
-
+HASHI = 35;
 var pageWidth;
 var pageHeight;
 var headerHeight;
 var table;
 
 jQuery(document).ready(function($){
-	
+
+	$.getJSON( "./states.json", function( json ) {
+      console.log( "JSON Data: " + json.states[0].state-name );
+     });
+
 	pageWidth = window.innerWidth;
-	pageHeight = window.innerHeight;
+
+	if (window.innerHeight < 400){
+		pageHeight = 400;
+		$("body").css ("overflow-y", "auto");
+	}
+	else pageHeight = window.innerHeight;
 	
 	$("#fullpage").css({
 		height: function(){
@@ -57,19 +66,19 @@ jQuery(document).ready(function($){
 
 	$(".philosopher").css({
 		height: function(){
-			return(pageHeight / 7);
+			return(pageHeight / 5);
 		},
 		left: function(){
 				return ((pageWidth-$(this).width())/2);
 		},
 		top: function(){
-				return headerHeight * 1.5;
+				return headerHeight * 1.3;
 		},
 	});
 
 	$("#table").css({
-		width: function(){
-			return (table = pageWidth*(3/10));
+		height: function(){
+			return (pageHeight*(6/10));
 		},
 		left: function(){
 			return (pageWidth-$(this).width())/2;
@@ -80,12 +89,32 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	$(".philosopher").css({"transform-origin":""+(50)+"% "+(298)+"%"});
-	$("#phi1").css({"transform":"rotate("+0+"deg)"});
-	$("#phi2").css({"transform":"rotate("+72+"deg)"});
-	$("#phi3").css({"transform":"rotate("+144+"deg)"});
-	$("#phi4").css({"transform":"rotate("+216+"deg)"});
-	$("#phi5").css({"transform":"rotate("+288+"deg)"});
+	$(".tableware > img").css({
+		height: function(){
+			return(pageHeight / 8.8);
+		},	
+		left: function(){
+				return ((pageWidth-$(this).width())/2);
+		},
+		top: function(){
+				return headerHeight * 2.7;
+		},
+	});
 
+	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
+	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
+	
+	$("#phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
+	$("#phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
+	$("#phi3, #tb3 > img").css({"transform":"rotate("+144+"deg)"});
+	$("#phi4, #tb4 > img").css({"transform":"rotate("+216+"deg)"});
+	$("#phi5, #tb1 > img").css({"transform":"rotate("+288+"deg)"});
+
+
+	$("#hs1").css({"transform":"rotate("+(0+HASHI)+"deg)"});
+	$("#hs2").css({"transform":"rotate("+(72+HASHI)+"deg)"});
+	$("#hs3").css({"transform":"rotate("+(144+HASHI)+"deg)"});
+	$("#hs4").css({"transform":"rotate("+(216+HASHI)+"deg)"});
+	$("#hs5").css({"transform":"rotate("+(288+HASHI)+"deg)"});
 
 });
