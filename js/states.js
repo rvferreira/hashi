@@ -22,7 +22,8 @@ function unsetFrame(index){
 
     if (jsonObj.states[index].highlighted) {
         setObjectListInvisible(["#cover"]);
-        $(""+jsonObj.states[index].highlightTarget).removeClass("focus");
+        $(".focus").remove();
+
     }
 }
 
@@ -55,12 +56,22 @@ function setFrame(index){
 
     if (jsonObj.states[index].highlighted) {
         setObjectListVisible(["#cover"]);
-        $(""+jsonObj.states[index].highlightTarget).addClass("focus");
-        $(".focus:eq(0)").css({
-            left: function(){
-                return 0;
+        $(""+jsonObj.states[index].highlightTarget).clone().addClass("focus").appendTo("#cover");
+
+        var elementSize = pageHeight * 0.3;
+
+        $(".focus").css({
+            top: function(){
+                return pageHeight * 0.1;
+            },
+            width: function() {
+                return (elementSize + " !important");
+            },
+            left: function() {
+                return (pageWidth/2 - elementSize/2);
             }
-        });
+        })
+
     }
 }
 
