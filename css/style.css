@@ -1,4 +1,6 @@
 body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
 	overflow-x:hidden;
 	overflow-y:hidden;
 }
@@ -18,6 +20,7 @@ body {
 		position: absolute;
 		list-style:none;
 		white-space: nowrap;
+		z-index: 4;
 	}
 	
 		#menuItems li{
@@ -53,6 +56,32 @@ body {
 	margin:0;
 }			
 	
+	#code {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 3;
+		background-color: red;
+	}
+	#about {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 3;
+		background-color: green;
+	}
+	#cover {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 2;
+		background-color: #000;
+		opacity: 0.9;
+	}
+
 	#table {
 		position:absolute;
 		z-index: 0;
@@ -65,16 +94,38 @@ body {
 	}
 
 	.sim_nav {
+		z-index: 4;
 		position: absolute;
 		bottom: 0;
 	}
 
+	.focus {
+		z-index: 4;
+	}
+
 	#prev {
-		left: 0;
+	
+		background-image: url("../img/Anterior.png");
+
 	}
 
 	#next {
-		right: 0;
+	
+		background-image: url("../img/Proximo.png");
+	}
+
+	.sim_nav {
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		background-color:#380B61;
+		opacity: 0.8;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.sim_nav:hover {
+		opacity: 1;
 	}
 
 	.tableware, .dish, .hashi {

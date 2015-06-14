@@ -10,7 +10,7 @@
         ".thinking",
         ".tableware"
       ],
-      "textOnScreen": "true",
+      "textOnScreen": true,
       "englishFrameText": "This is the intro",
       "portugueseFrameText": "This is the intro"
     },
