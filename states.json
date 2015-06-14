@@ -2,23 +2,33 @@
   "states":[
     {
       "stateName": "Intro",
-      "highlighted": true,
+      "highlighted": false,
       "highlightTarget": "phi0",
       "invisibleElements": [
         ".hungry",
         ".eating"
       ],
-      "textonScreen": "true",
+      "textOnScreen": true,
       "englishFrameText": "This is the intro",
       "portugueseFrameText": "This is the intro"
     },
 
     {
       "stateName": "Table Presentation",
-      "highlighted": false,
-      "highlightTarget": "none",
+      "highlighted": true,
+      "highlightTarget": "#phi1_t",
       "invisibleElements": [
-        ".thinking",
+        ".hungry",
+        ".eating"
+      ]
+    },
+
+    {
+      "stateName": "Table Presentation",
+      "highlighted": true,
+      "highlightTarget": "#phi1_h",
+      "invisibleElements": [
+        "",
         ".eating"
       ]
     },
