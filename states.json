@@ -2,6 +2,19 @@
   "states":[
     {
       "stateName": "Intro",
+      "highlighted": true,
+      "highlightTarget": "ds1_sp",
+      "invisibleElements": [
+        "#ds1_sushi",
+        "#ds1"
+      ],
+      "textOnScreen": true,
+      "englishFrameText": "This is the intro",
+      "portugueseFrameText": "This is the intro"
+    },
+
+    {
+      "stateName": "Intro",
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [

@@ -56,6 +56,11 @@ function setFrame(index){
     if (jsonObj.states[index].highlighted) {
         setObjectListVisible(["#cover"]);
         $(""+jsonObj.states[index].highlightTarget).addClass("focus");
+        $(".focus:eq(0)").css({
+            left: function(){
+                return 0;
+            }
+        });
     }
 }
 
