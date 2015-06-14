@@ -289,7 +289,8 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
+        "#phi1_t", "#phi4_t",
+        "#ph2_h", "#ph3_h", "#ph5_h",
         ".eating",
         ".empty",
         ".sp"
