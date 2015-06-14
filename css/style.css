@@ -25,7 +25,7 @@ body {
 			display: inline;
 			line-height: 200%;
 			border-right:1px solid #fff;
-			padding-right: 5%;
+			
 		}
 			#menuItems li:nth-last-child(1) {	
 				border-right: none;
@@ -33,7 +33,7 @@ body {
 
 			#menuItems li a{
 				color:white;
-				opacity: 0.85;	
+				opacity: 0.85;
 
 			}
 
@@ -113,9 +113,9 @@ body {
 	}
 
 	.sim_nav {
-		border-radius: 3px;
-		-moz-border-radius: 3px;
-		-webkit-border-radius: 3px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 		background-color:#380B61;
 		opacity: 0.8;
 		background-repeat: no-repeat;
