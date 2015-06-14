@@ -123,11 +123,11 @@ jQuery(document).ready(function($){
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
 	
-	$("#phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
-	$("#phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
-	$("#phi3, #tb3 > img").css({"transform":"rotate("+144+"deg)"});
-	$("#phi4, #tb4 > img").css({"transform":"rotate("+216+"deg)"});
-	$("#phi5, #tb1 > img").css({"transform":"rotate("+288+"deg)"});
+	$(".phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
+	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
+	$(".phi3, #tb3 > img").css({"transform":"rotate("+144+"deg)"});
+	$(".phi4, #tb4 > img").css({"transform":"rotate("+216+"deg)"});
+	$(".phi5, #tb1 > img").css({"transform":"rotate("+288+"deg)"});
 
 
 	$("#hs1").css({"transform":"rotate("+(0+HASHI_ANGLE_OFFSET)+"deg)"});

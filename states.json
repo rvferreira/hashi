@@ -5,10 +5,8 @@
       "highlighted": true,
       "highlightTarget": "phi0",
       "invisibleElements": [
-
-      ],
-      "invisibleClasses":[
-
+        ".hungry",
+        ".eating"
       ],
       "textonScreen": "true",
       "englishFrameText": "This is the intro",
@@ -20,10 +18,18 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        "phi2"
-      ],
-      "invisibleClasses":[
+        ".thinking",
+        ".eating"
+      ]
+    },
 
+    {
+      "stateName": "Table Presentation",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".thinking",
+        ".hungry"
       ]
     }
 

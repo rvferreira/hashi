@@ -5,14 +5,14 @@ var framesCount;
 function setObjectListVisible(objList){
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
-        $("#"+objList[i]).css('display', 'inline');
+        $(""+objList[i]).css('display', 'inline');
     }
 }
 
 function setObjectListInvisible(objList){
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
-        $("#"+objList[i]).hide();
+        $(""+objList[i]).hide();
     }
 }
 
@@ -57,7 +57,6 @@ function statesInit(){
 }
 
 function next() {
-    console.log("printf "+ $("#tb1").width() +" "+$("#tb1").height());
     unsetFrame(currentFrame++);
     setFrame(currentFrame);
 }
