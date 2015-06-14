@@ -25,7 +25,7 @@ body {
 			display: inline;
 			line-height: 200%;
 			border-right:1px solid #fff;
-			padding-right: 5%;
+			
 		}
 			#menuItems li:nth-last-child(1) {	
 				border-right: none;
@@ -33,7 +33,7 @@ body {
 
 			#menuItems li a{
 				color:white;
-				opacity: 0.85;	
+				opacity: 0.85;
 
 			}
 
@@ -80,6 +80,18 @@ body {
 		opacity: 0.9;
 	}
 
+	#coverText {
+		position: absolute;
+		width: 60%;
+		height: 40%;
+		left: 20%;
+		top: 30%;
+		background-color: #151515;
+		border-radius: 30px;
+		color: #FFF;
+
+	}
+
 	#table {
 		position:absolute;
 		z-index: 0;
@@ -98,24 +110,22 @@ body {
 	}
 
 	.focus {
-		z-index: 4;
+		z-index: 4 !important;
 	}
 
 	#prev {
-	
 		background-image: url("../img/Anterior.png");
 
 	}
 
 	#next {
-	
 		background-image: url("../img/Proximo.png");
 	}
 
 	.sim_nav {
-		border-radius: 3px;
-		-moz-border-radius: 3px;
-		-webkit-border-radius: 3px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 		background-color:#380B61;
 		opacity: 0.8;
 		background-repeat: no-repeat;

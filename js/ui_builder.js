@@ -51,17 +51,26 @@ jQuery(document).ready(function($){
 		}
 	});
 	
+	$("#menuItems li").css({
+
+		paddingLeft: function(){
+			return pageWidth*(5/100);
+		},
+		paddingRight: function(){
+			return pageWidth*(5/100);
+		}
+	});
 	
 	$("#menuItems").css({
 		
 		fontSize: function(){
 			return headerHeight * 0.5;
 		},
-
 		left: function(){
-			return (pageWidth-$("#menuItems").width())/2;
+			return (pageWidth-$("#menuItems").width())/2.2;
 		}
 	});
+	
 
 	var philosopherHeight = (pageHeight / 5);
 	var philosopherWidth = philosopherHeight * 224 / 300;
@@ -126,6 +135,9 @@ jQuery(document).ready(function($){
     	},
     	height: function(){
     		return philosopherWidth/2;	
+    	},
+    	marginBottom: function(){
+    		return philosopherWidth/14;
     	}
     });
 
