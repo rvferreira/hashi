@@ -10,6 +10,7 @@
 
 	<script type="text/javascript" src="./js/ui_builder.js"></script>
 	<script type="text/javascript" src="./js/states.js"></script>
+	<script type="text/javascript" src="./js/menu.js"></script>
     
     <title>Hashi - Mastering the japanese dinner</title>
 
@@ -19,9 +20,9 @@
 	<div id="header">
 		<img id="logo" src="./img/Logo_Hashi.png"/>
 		<ul id="menuItems">
-			<li><a href="#">Simulador</a></li>
-			<li><a href="#">Código</a></li>
-			<li><a href="#">Sobre</a></li>
+			<li><a href="#"  onclick="simulatorLink()">Simulador</a></li>
+			<li><a href="#" onclick="codeLink()">Código</a></li>
+			<li><a href="#" onclick="aboutLink()">Sobre</a></li>
 		</ul>
 		<ul id="langMenu">
 			<li><img id="eng" class="lang_img" src="./img/Ingles.png"/></li>
@@ -30,6 +31,10 @@
 		<br style="clear: both;"/>
 	</div>
 	<div id="content">
+		<div id="about">
+		
+		</div>
+		<div id="code"> </div>
 		<img id="phi1" class="philosopher" src="./img/Filosofo_Pensando.png" />
 		<img id="phi2" class="philosopher" src="./img/Filosofo_Pensando.png" />
 		<img id="phi3" class="philosopher" src="./img/Filosofo_Pensando.png" />
