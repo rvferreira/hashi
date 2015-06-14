@@ -22,19 +22,20 @@ function unsetFrame(index){
 }
 
 function setFrame(index){
+    $("#prev").off('click');
+    $("#next").off('click');
+
     if (index <= 0){
         currentFrame = 0;
         $("#next").click(function() {
             next();
         });
-        $("#prev").off('click');
     }
     else if (index >= (framesCount - 1)){
         currentFrame = framesCount - 1;
         $("#prev").click(function() {
             prev();
         });
-        $("#next").off('click');
     }
     else {
         $("#prev").click(function() {
