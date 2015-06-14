@@ -80,6 +80,18 @@ body {
 		opacity: 0.9;
 	}
 
+	#coverText {
+		position: absolute;
+		width: 60%;
+		height: 40%;
+		left: 20%;
+		top: 30%;
+		background-color: #151515;
+		border-radius: 30px;
+		color: #FFF;
+
+	}
+
 	#table {
 		position:absolute;
 		z-index: 0;
@@ -98,17 +110,15 @@ body {
 	}
 
 	.focus {
-		z-index: 4;
+		z-index: 4 !important;
 	}
 
 	#prev {
-	
 		background-image: url("../img/Anterior.png");
 
 	}
 
 	#next {
-	
 		background-image: url("../img/Proximo.png");
 	}
 

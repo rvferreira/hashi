@@ -9,10 +9,7 @@
         ".eating",
         ".thinking",
         ".tableware"
-      ],
-      "textOnScreen": true,
-      "englishFrameText": "This is the intro",
-      "portugueseFrameText": "This is the intro"
+      ]
     },
 
     {
@@ -42,19 +39,7 @@
     {
       "stateName": "Introduction to the problem",
       "highlighted": true,
-      "highlightTarget": ".sp",
-      "invisibleElements": [
-        ".eating",
-        ".hungry",
-        ".empty",
-        ".sushi"
-      ]
-    },
-
-    {
-      "stateName": "Introduction to the problem explanation",
-      "highlighted": true,
-      "highlightTarget": ".sp",
+      "highlightTarget": "#ds1_sp",
       "invisibleElements": [
         ".eating",
         ".hungry",
@@ -69,19 +54,7 @@
     {
       "stateName": "Introduction to the japanese dinner problem",
       "highlighted": true,
-      "highlightTarget": ".sushi",
-      "invisibleElements": [
-        ".eating",
-        ".hungry",
-        ".empty",
-        ".sp"
-      ]
-    },
-
-    {
-      "stateName": "Introduction to the japanese dinner problem explanation",
-      "highlighted": true,
-      "highlightTarget": ".sushi",
+      "highlightTarget": "#ds1_sushi",
       "invisibleElements": [
         ".eating",
         ".hungry",
@@ -94,23 +67,41 @@
     },
 
     {
-      "stateName": "Introduction to process",
+      "stateName": "Introduction to process (thinking philosopher)",
       "highlighted": true,
-      "highlightTarget": ".thinking",
+      "highlightTarget": "#phi1_t",
       "invisibleElements": [
         ".eating",
         ".hungry",
         ".empty",
         ".sp"
-      ]
+      ],
+      "textOnScreen": "true",
+      "englishFrameText": "This is the explanation",
+      "portugueseFrameText": "Esta é a explicacao"
     },
 
     {
-      "stateName": "Introduction to process explanation",
+      "stateName": "Introduction to process (hungry philosopher)",
       "highlighted": true,
-      "highlightTarget": ".thinking",
+      "highlightTarget": "#phi1_h",
       "invisibleElements": [
+        ".thinking",
         ".eating",
+        ".empty",
+        ".sp"
+      ],
+      "textOnScreen": "true",
+      "englishFrameText": "This is the explanation",
+      "portugueseFrameText": "Esta é a explicacao"
+    },
+
+    {
+      "stateName": "Introduction to process (eating philosopher)",
+      "highlighted": true,
+      "highlightTarget": "#phi1_e",
+      "invisibleElements": [
+        ".thinking",
         ".hungry",
         ".empty",
         ".sp"
@@ -129,18 +120,6 @@
         ".hungry",
         ".empty",
         ".sp"
-      ]
-    },
-
-    {
-      "stateName": "Introduction to critical region explanation",
-      "highlighted": true,
-      "highlightTarget": ".hashi",
-      "invisibleElements": [
-        ".eating",
-        ".hungry",
-        ".empty",
-        ".sp"
       ],
       "textOnScreen": "true",
       "englishFrameText": "This is the explanation",
@@ -149,7 +128,7 @@
 
     {
       "stateName": "Introduction to the wrong solution",
-      "highlighted": false,
+      "highlighted": true,
       "highlightTarget": "none",
       "invisibleElements": [
         ".eating",
@@ -176,6 +155,20 @@
     },
 
     {
+      "stateName": "Wrong solution (Philosophers 3 and 5 are hungry and get right hashi)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".eating",
+        "#phi1_h", "#phi2_h", "#phi4_h",
+        "#phi3_t", "#phi5_t",
+        "#hs2", "#hs4",
+        ".empty",
+        ".sp"
+      ]
+    },
+
+    {
       "stateName": "Wrong solution (Philosophers 3 and 5 are eating, 2 becomes hungry)",
       "highlighted": false,
       "highlightTarget": "none",
@@ -183,9 +176,39 @@
         "#phi1_e", "#phi2_e", "#phi4_e",
         "#phi1_h", "#phi3_h", "#phi4_h", "#phi5_h",
         "#phi2_t", "#phi3_t", "#phi5_t",
-        "#ds5", "#ds2", "ds4",
+        "#ds1", "#ds2", "ds4",
+        "#hs2", "#hs3", "#hs4", "#hs5",
         ".sp",
-        "#ds3_sushi", "#ds1_sushi"
+        "#ds3_sushi", "#ds5_sushi"
+      ]
+    },
+
+    {
+      "stateName": "Wrong solution (Philosophers 3 and 5 are eating, 2 get the right hashi)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        "#phi1_e", "#phi2_e", "#phi4_e",
+        "#phi1_h", "#phi3_h", "#phi4_h", "#phi5_h",
+        "#phi2_t", "#phi3_t", "#phi5_t",
+        "#ds1", "#ds2", "ds4",
+        "#hs1", "#hs2", "#hs3", "#hs4", "#hs5",
+        ".sp",
+        "#ds3_sushi", "#ds5_sushi"
+      ]
+    },
+
+    {
+      "stateName": "Wrong solution (2 is hungry with the left hashi)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".eating",
+        "#phi1_h", "#phi3_h", "#phi4_h", "#phi5_h",
+        "#phi2_t",
+        "#ds1", "#ds2", "ds4",
+        "#hs1",
+        ".sp"
       ]
     },
 
@@ -199,7 +222,20 @@
         "#phi2_t",
         "#ds1", "#ds3", "ds4", "ds5",
         ".sp",
+        "#hs1", "#hs2",
         "#ds2_sushi"
+      ]
+    },
+
+    {
+      "stateName": "Everyone okay",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".hungry",
+        ".eating",
+        ".empty",
+        ".sp"
       ]
     },
 
@@ -216,26 +252,28 @@
     },
 
     {
-      "stateName": "Wrong solution (Everyone got one hashi)",
+      "stateName": "Wrong solution (Everyone hungry and without hashi)",
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
         ".thinking",
         ".eating",
         ".empty",
-        ".sp"
+        ".sp",
+        ".hashi"
       ]
     },
 
     {
       "stateName": "Introduction to what is a deadlock",
-      "highlighted": false,
+      "highlighted": true,
       "highlightTarget": "none",
       "invisibleElements": [
         ".thinking",
         ".eating",
         ".empty",
-        ".sp"
+        ".sp",
+        ".hashi"
       ],
       "textOnScreen": "true",
       "englishFrameText": "This is the explanation",
@@ -250,19 +288,21 @@
         ".thinking",
         ".eating",
         ".empty",
-        ".sp"
+        ".sp",
+        ".hashi"
       ]
     },
 
     {
-      "stateName": "Philosphers die",
-      "highlighted": false,
+      "stateName": "Philosphers died",
+      "highlighted": true,
       "highlightTarget": "none",
       "invisibleElements": [
         ".thinking",
         ".eating",
         ".empty",
-        ".sp"
+        ".sp",
+        ".hashi"
       ],
       "textOnScreen": "true",
       "englishFrameText": "Watch out! We don't want to kill our philosophers!",
@@ -271,10 +311,10 @@
 
     {
       "stateName": "Explanation of the correct answer",
-      "highlighted": false,
+      "highlighted": true,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
+        ".hungry",
         ".eating",
         ".empty",
         ".sp"
@@ -285,13 +325,41 @@
     },
 
     {
+      "stateName": "Default of no one hungry",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".hungry",
+        ".eating",
+        ".empty",
+        ".sp"
+      ]
+    },
+
+    {
       "stateName": "Right solution (1 and 4 are hungry)",
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
+        "#phi1_t", "#phi4_t",
+        "#phi2_h", "#phi3_h", "#phi5_h",
         ".eating",
         ".empty",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (1 and 4 get the right hashi and the left)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        "#phi1_t", "#phi4_t",
+        ".hungry",
+        "#phi2_e", "#phi3_e", "#phi5_e",
+        "#ds2", "#ds3", "#ds5",
+        "#ds1_sushi", "#ds4_sushi",
+        "#hs1", "#hs3", "#hs4", "#hs5",
         ".sp"
       ]
     },
@@ -301,9 +369,12 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
-        ".eating",
-        ".empty",
+        "#phi1_t",  "#phi2_t",  "#phi3_t", "#phi4_t",
+        "#phi1_h", "#phi4_h", "#phi5_h",
+        "#phi2_e", "#phi3_e", "#phi5_e",
+        "#hs1", "#hs3", "#hs4", "#hs5",
+        "#ds2", "#ds3", "#ds5",
+        "#ds1_sushi", "#ds4_sushi",
         ".sp"
       ]
     },
@@ -313,7 +384,23 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
+        "#phi1_t",  "#phi2_t",  "#phi3_t", "#phi4_t",
+        "#phi1_h", "#phi4_h", "#phi5_h",
+        "#phi2_e", "#phi3_e", "#phi5_e",
+        "#hs1", "#hs3", "#hs4", "#hs5",
+        "#ds2", "#ds3", "#ds5",
+        "#ds1_sushi", "#ds4_sushi",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (2 and 3 are hungry)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        "#phi2_t",  "#phi3_t",
+        "#phi1_h", "#phi4_h", "#phi5_h",
         ".eating",
         ".empty",
         ".sp"
@@ -325,8 +412,24 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
+        "#phi1_h", "#phi2_h", "#phi4_h", "#phi5_h",
+        "#phi1_e", "#phi3_e", "#phi4_e", "#phi5_e",
+        "#phi2_t", "#phi3_t",
+        "#ds2_sushi",
+        "#ds1", "#ds3", "#ds4", "#ds5",
+        "#hs1", "#hs2",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (3 is hungry)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
         ".eating",
+        "#phi1_h", "#phi2_h", "#phi4_h", "#phi5_h",
+        "#phi3_t",
         ".empty",
         ".sp"
       ]
@@ -337,7 +440,22 @@
       "highlighted": false,
       "highlightTarget": "none",
       "invisibleElements": [
-        ".thinking",
+        ".hungry",
+        "#phi1_e", "#phi2_e", "#phi4_e", "#phi5_e",
+        "#phi3_t",
+        "#ds3_sushi",
+        "#ds1", "#ds2", "#ds4", "#ds5",
+        "#hs2", "#hs3",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (Everyone is fine)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".hungry",
         ".eating",
         ".empty",
         ".sp"
@@ -354,7 +472,91 @@
         ".empty",
         ".sp"
       ]
+    },
+
+    {
+      "stateName": "Right solution (1 and 3 are eating, others send request)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".thinking",
+        "#phi1_h", "#phi3_h",
+        "#phi2_e", "#phi4_e", "#phi5_e",
+        "#ds1_sushi", "#ds3_sushi",
+        "#ds2", "#ds4", "#ds5",
+        "#hs1", "#hs2", "#hs3", "#hs5",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (2, 4 and 5 are hungry)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".eating",
+        "#phi2_t", "#phi4_t", "#phi5_t",
+        "#phi1_h", "#phi3_h",
+        ".empty",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (2 and 4 are eating and 5 send request)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        "#phi1_e", "#phi3_e", "#phi5_e",
+        "#phi2_t", "#phi4_t", "#phi5_t",
+        "#phi1_h", "#phi2_h", "#phi3_h", "#phi4_h",
+        "#hs1", "#hs2", "#hs3", "#hs4",
+        "#ds2_sushi", "#ds4_sushi",
+        "#ds1", "#ds3", "#ds5",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (5 is hungry)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".eating",
+        "#phi5_t",
+        "#phi1_h", "#phi2_h", "#phi3_h", "#phi4_h",
+        ".empty",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Right solution (5 is eating)",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".hungry",
+        "#phi5_t",
+        "#phi1_e", "#phi2_e", "#phi3_e", "#phi4_e",
+        "#ds5_sushi",
+        "#ds1", "#ds2", "#ds3", "#ds4",
+        "#hs4", "#hs5",
+        ".sp"
+      ]
+    },
+
+    {
+      "stateName": "Default: Everyone is fine",
+      "highlighted": false,
+      "highlightTarget": "none",
+      "invisibleElements": [
+        ".hungry",
+        ".eating",
+        ".empty",
+        ".sp"
+      ]
     }
+
 
   ]
 }
