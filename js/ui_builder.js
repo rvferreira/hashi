@@ -1,6 +1,6 @@
 HEADER_HEIGHT = 0.08;
 HASHI_ANGLE_OFFSET = 35;
-RHAND_ANGLE_OFFSET = -10;
+RHAND_ANGLE_OFFSET = 345;
 
 var language = 0; /*0 para pt_br e 1 para eng_us*/
 
@@ -205,6 +205,7 @@ jQuery(document).ready(function($){
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
+	$(".hand").css({"transform-origin":""+(50)+"% "+(787)+"%"});
 	
 	$(".phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
 	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
@@ -218,6 +219,8 @@ jQuery(document).ready(function($){
 	$("#hs3").css({"transform":"rotate("+(144+HASHI_ANGLE_OFFSET)+"deg)"});
 	$("#hs4").css({"transform":"rotate("+(216+HASHI_ANGLE_OFFSET)+"deg)"});
 	$("#hs5").css({"transform":"rotate("+(288+HASHI_ANGLE_OFFSET)+"deg)"});
+
+	$("#rhand1").css({"transform":"rotate("+(0+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (0+RHAND_ANGLE_OFFSET));
 
 	
 	styleCode($("#code_error"));

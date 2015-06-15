@@ -16,16 +16,6 @@ function setObjectListInvisible(objList){
     }
 }
 
-$(".focus").each(function(index){
-    $(this).css({
-        top: pageHeight * 0.12,
-        left: (pageWidth - elementHeight/proportion)/2,
-        "transform":"rotate(0deg)",
-        height: elementHeight,
-        width: elementHeight/proportion
-    });
-});
-
 function setHandsColor(objList){
     var color = [0, 0, 0, 0, 0];
     var handColorList = ["none", "red", "green", "blue"];
@@ -72,6 +62,62 @@ function unsetFrame(index){
         setObjectListInvisible(["#cover"]);
         $(".focus").remove();
         $("#coverText").empty();
+    }
+
+    if (jsonObj.states[index].rGetHashi[0]) dropHashi('r', 1);
+    var objList = jsonObj.states[index].rGetHashi;
+    /*var arrayLength = objList.length; *//*
+    for (var i = 0; i < arrayLength; i++) {
+        dropHashi('r', objList[i]);
+    }
+    */
+
+}
+
+function dropHashi(side, philosopher){
+       var r;
+
+        if (side == 'r') {
+            r = $("#"+side+"hand"+philosopher).data('rot') + 20;
+        }
+        else if (side == 'l') {
+            r = $("#"+side+"hand"+philosopher).data('rot') - 20;
+        }
+        $("#"+side+"hand"+philosopher).css({"transform":"rotate("+r+"deg)"}).data('rot', r);
+        $("#"+side+"hand"+philosopher).removeClass(side+"HandGetHashi"+philosopher);
+
+        var hashi = (side == 'r') ? philosopher - 1 : philosopher;
+        hashi = hashi < 1 ? hashi + 5 : hashi;
+        hashi = hashi > 5 ? hashi - 5 : hashi;
+
+        $("#hs"+hashi).removeClass(side+"HandGetHashi"+philosopher);
+}
+
+function getHashi(side, philosopher){
+       var r;
+
+        if (side == 'r') {
+            r = $("#"+side+"hand"+philosopher).data('rot') - 20;
+        }
+        else if (side == 'l') {
+            r = $("#"+side+"hand"+philosopher).data('rot') + 20;
+        }
+        $("#"+side+"hand"+philosopher).css({"transform":"rotate("+r+"deg)"}).data('rot', r);
+        $("#"+side+"hand"+philosopher).addClass(side+"HandGetHashi"+philosopher);
+
+        var hashi = (side == 'r') ? philosopher - 1 : philosopher;
+        hashi = hashi < 1 ? hashi + 5 : hashi;
+        hashi = hashi > 5 ? hashi - 5 : hashi;
+
+        $("#hs"+hashi).addClass(side+"HandGetHashi"+philosopher);
+}
+
+function setAnimations(state){
+    var objList = state.rGetHashi;
+
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        getHashi('r', objList[i]);
     }
 }
 
@@ -122,6 +168,8 @@ function setFrame(index){
 
         $("#coverText").append(jsonObj.states[index].portugueseFrameText);
     }
+
+    setAnimations(jsonObj.states[index]);
 }
 
 function statesInit(){
