@@ -71,6 +71,20 @@ jQuery(document).ready(function($){
 		}
 	});
 	
+	$(".content_menu").css({
+		width: function(){
+			return pageWidth*0.6;
+		},
+		left: function (){
+			return (pageWidth - pageWidth*0.6)/2;
+		},
+		marginTop: function(){
+			return (pageWidth*0.05);
+		},
+		padding: function(){
+			return (pageWidth*0.01);
+		}
+	});
 
 	var philosopherHeight = (pageHeight / 5);
 	var philosopherWidth = philosopherHeight * 224 / 300;

@@ -59,16 +59,21 @@ body {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		z-index: 3;
-		background-color: red;
+		z-index: 5;
+		background-color: #fff;
 	}
+
+		#code .content_menu {
+			border:1px solid red;
+			position: relative;
+		}
 	#about {
 		display: none;
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		z-index: 3;
-		background-color: green;
+		z-index: 5;
+		background-color: #fff;
 	}
 	#cover {
 		display: none;
