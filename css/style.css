@@ -59,16 +59,30 @@ body {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		z-index: 3;
-		background-color: red;
+		z-index: 5;
+		background-color: #fff;
 	}
+
+		#code .content_menu {
+			border:1px solid #c0c0c0;
+			position: relative;
+
+			border-radius: 8px;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+
+			box-shadow: inset 0 0 5px #ccc;
+			-moz-box-shadow : inset 0 0 5px #ccc;
+			-webkit-box-shadow : inset 0 0 5px #ccc;
+
+		}
 	#about {
 		display: none;
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		z-index: 3;
-		background-color: green;
+		z-index: 5;
+		background-color: #fff;
 	}
 	#cover {
 		display: none;
@@ -78,6 +92,7 @@ body {
 		z-index: 2;
 		background-color: #000;
 		opacity: 0.9;
+		text-align: justify;
 	}
 
 	#coverText {
