@@ -70,6 +70,11 @@ function unsetFrame(index){
         dropHashi('r', objList[i]);
     }
 
+    objList = jsonObj.states[index].lGetHashi;
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        dropHashi('l', objList[i]);
+    }
 }
 
 function dropHashi(side, philosopher){
