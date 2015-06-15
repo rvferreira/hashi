@@ -1,5 +1,6 @@
 HEADER_HEIGHT = 0.08;
 HASHI_ANGLE_OFFSET = 35;
+RHAND_ANGLE_OFFSET = -15;
 
 var language = 0; /*0 para pt_br e 1 para eng_us*/
 
@@ -103,6 +104,20 @@ jQuery(document).ready(function($){
 		},
 	});
 
+	var handSize = philosopherHeight * 0.15;
+
+	$(".hand").css({
+		height: function(){
+			return handSize;
+		},
+		width: function(){
+				return handSize;
+		},
+		"border-radius": handSize,
+		left: (pageWidth-handSize)/2 - 1,
+		top: headerHeight * 3.5
+	});
+
 	var tableDiameter = (pageHeight*(6/10));
 
 	$("#table").css({
@@ -190,6 +205,7 @@ jQuery(document).ready(function($){
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
+	$(".hand").css({"transform-origin":""+(50)+"% "+(787)+"%"});
 	
 	$(".phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
 	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
@@ -203,6 +219,12 @@ jQuery(document).ready(function($){
 	$("#hs3").css({"transform":"rotate("+(144+HASHI_ANGLE_OFFSET)+"deg)"});
 	$("#hs4").css({"transform":"rotate("+(216+HASHI_ANGLE_OFFSET)+"deg)"});
 	$("#hs5").css({"transform":"rotate("+(288+HASHI_ANGLE_OFFSET)+"deg)"});
+
+	$("#rhand1").css({"transform":"rotate("+(360+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (360+RHAND_ANGLE_OFFSET));
+	$("#rhand2").css({"transform":"rotate("+(72+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (72+RHAND_ANGLE_OFFSET));
+	$("#rhand3").css({"transform":"rotate("+(144+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (144+RHAND_ANGLE_OFFSET));
+	$("#rhand4").css({"transform":"rotate("+(216+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+RHAND_ANGLE_OFFSET));
+	$("#rhand5").css({"transform":"rotate("+(288+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+RHAND_ANGLE_OFFSET));
 
 	
 	styleCode($("#code_error"));

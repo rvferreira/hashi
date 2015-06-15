@@ -16,6 +16,45 @@ function setObjectListInvisible(objList){
     }
 }
 
+function setHandsColor(objList){
+    var color = [0, 0, 0, 0, 0];
+    var handColorList = ["none", "red", "green", "blue"];
+
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        switch (""+objList[i]){
+        case ".eating":
+            color[0] += 1;
+            color[1] += 1;
+            color[2] += 1;
+            color[3] += 1;
+            color[4] += 1;
+            break;
+        case ".hungry":
+            color[0] += 2;
+            color[1] += 2;
+            color[2] += 2;
+            color[3] += 2;
+            color[4] += 2;
+            break;
+        case "#phi1_e": color[0] += 1; break;
+        case "#phi2_e": color[1] += 1; break;
+        case "#phi3_e": color[2] += 1; break;
+        case "#phi4_e": color[3] += 1; break;
+        case "#phi5_e": color[4] += 1; break;
+        case "#phi1_h": color[0] += 2; break;
+        case "#phi2_h": color[1] += 2; break;
+        case "#phi3_h": color[2] += 2; break;
+        case "#phi4_h": color[3] += 2; break;
+        case "#phi5_h": color[4] += 2; break;
+                     
+        }
+    }
+    $(".hand").each(function(index){
+        $(this).css({"border-color":handColorList[color[index % 5]]})
+    });
+}
+
 function unsetFrame(index){
     setObjectListVisible(jsonObj.states[index].invisibleElements);
 
@@ -23,6 +62,62 @@ function unsetFrame(index){
         setObjectListInvisible(["#cover"]);
         $(".focus").remove();
         $("#coverText").empty();
+    }
+
+    if (jsonObj.states[index].rGetHashi[0]) dropHashi('r', 1);
+    var objList = jsonObj.states[index].rGetHashi;
+    /*var arrayLength = objList.length; *//*
+    for (var i = 0; i < arrayLength; i++) {
+        dropHashi('r', objList[i]);
+    }
+    */
+
+}
+
+function dropHashi(side, philosopher){
+       var r;
+
+        if (side == 'r') {
+            r = $("#"+side+"hand"+philosopher).data('rot') + 20;
+        }
+        else if (side == 'l') {
+            r = $("#"+side+"hand"+philosopher).data('rot') - 20;
+        }
+        $("#"+side+"hand"+philosopher).css({"transform":"rotate("+r+"deg)"}).data('rot', r);
+        $("#"+side+"hand"+philosopher).removeClass(side+"HandGetHashi"+philosopher);
+
+        var hashi = (side == 'r') ? philosopher - 1 : philosopher;
+        hashi = hashi < 1 ? hashi + 5 : hashi;
+        hashi = hashi > 5 ? hashi - 5 : hashi;
+
+        $("#hs"+hashi).removeClass(side+"HandGetHashi"+philosopher);
+}
+
+function getHashi(side, philosopher){
+       var r;
+
+        if (side == 'r') {
+            r = $("#"+side+"hand"+philosopher).data('rot') - 20;
+        }
+        else if (side == 'l') {
+            r = $("#"+side+"hand"+philosopher).data('rot') + 20;
+        }
+        $("#"+side+"hand"+philosopher).css({"transform":"rotate("+r+"deg)"}).data('rot', r);
+        $("#"+side+"hand"+philosopher).addClass(side+"HandGetHashi"+philosopher);
+
+        var hashi = (side == 'r') ? philosopher - 1 : philosopher;
+        hashi = hashi < 1 ? hashi + 5 : hashi;
+        hashi = hashi > 5 ? hashi - 5 : hashi;
+
+        $("#hs"+hashi).addClass(side+"HandGetHashi"+philosopher);
+}
+
+function setAnimations(state){
+    var objList = state.rGetHashi;
+
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        getHashi('r', objList[i]);
     }
 }
 
@@ -32,7 +127,7 @@ function setFrame(index){
 
     if (index <= 0){
         currentFrame = 0;
-        $("#next, #play").click(function() {
+        $("#next").click(function() {
             next();
         });
 
@@ -52,6 +147,7 @@ function setFrame(index){
         });
     }
     setObjectListInvisible(jsonObj.states[index].invisibleElements);
+    setHandsColor(jsonObj.states[index].invisibleElements);
 
     if (jsonObj.states[index].highlighted) {
         setObjectListVisible(["#cover"]);
@@ -72,6 +168,8 @@ function setFrame(index){
 
         $("#coverText").append(jsonObj.states[index].portugueseFrameText);
     }
+
+    setAnimations(jsonObj.states[index]);
 }
 
 function statesInit(){
