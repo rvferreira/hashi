@@ -117,6 +117,13 @@ function setAnimations(state){
     for (var i = 0; i < arrayLength; i++) {
         getHashi('r', objList[i]);
     }
+
+    objList = state.lGetHashi;
+
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        getHashi('l', objList[i]);
+    }
 }
 
 function setFrame(index){
