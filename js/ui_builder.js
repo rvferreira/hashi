@@ -177,4 +177,7 @@ jQuery(document).ready(function($){
 	$("#hs4").css({"transform":"rotate("+(216+HASHI_ANGLE_OFFSET)+"deg)"});
 	$("#hs5").css({"transform":"rotate("+(288+HASHI_ANGLE_OFFSET)+"deg)"});
 
+	
+	styleCode($("#code_error"));
+	styleCode($("#code_correct"));
 });
