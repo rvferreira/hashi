@@ -1,6 +1,8 @@
 HEADER_HEIGHT = 0.08;
 HASHI_ANGLE_OFFSET = 35;
 
+var language = 0; /*0 para pt_br e 1 para eng_us*/
+
 var pageWidth;
 var pageHeight;
 var headerHeight;

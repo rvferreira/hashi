@@ -18,12 +18,11 @@ function setObjectListInvisible(objList){
 
 function unsetFrame(index){
     setObjectListVisible(jsonObj.states[index].invisibleElements);
-    console.log("Saindo de :" + index);
 
     if (jsonObj.states[index].highlighted) {
         setObjectListInvisible(["#cover"]);
         $(".focus").remove();
-
+        $("#coverText").empty();
     }
 }
 
@@ -52,26 +51,25 @@ function setFrame(index){
         });
     }
     setObjectListInvisible(jsonObj.states[index].invisibleElements);
-    console.log("Para :" + index);
 
     if (jsonObj.states[index].highlighted) {
         setObjectListVisible(["#cover"]);
-        $(""+jsonObj.states[index].highlightTarget).clone().addClass("focus").appendTo("#cover");
+        $(""+jsonObj.states[index].highlightTarget).clone().addClass("focus").appendTo("body");
 
-        var elementSize = pageHeight * 0.3;
+        var elementHeight = pageHeight * 0.25;
+        var proportion = $(""+jsonObj.states[index].highlightTarget).height() / $(""+jsonObj.states[index].highlightTarget).width();
 
-        $(".focus").css({
-            top: function(){
-                return pageHeight * 0.1;
-            },
-            width: function() {
-                return (elementSize + " !important");
-            },
-            left: function() {
-                return (pageWidth/2 - elementSize/2);
-            }
-        })
+        $(".focus").each(function(index){
+            $(this).css({
+                top: pageHeight * 0.12,
+                left: (pageWidth - elementHeight/proportion)/2,
+                "transform":"rotate(0deg)",
+                height: elementHeight,
+                width: elementHeight/proportion
+            });
+        });
 
+        $("#coverText").append(jsonObj.states[index].portugueseFrameText);
     }
 }
 
