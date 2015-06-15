@@ -64,13 +64,11 @@ function unsetFrame(index){
         $("#coverText").empty();
     }
 
-    if (jsonObj.states[index].rGetHashi[0]) dropHashi('r', 1);
     var objList = jsonObj.states[index].rGetHashi;
-    /*var arrayLength = objList.length; *//*
+    var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         dropHashi('r', objList[i]);
     }
-    */
 
 }
 

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+	<meta charset="utf-8" />
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+	<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/animations.css" />
 
 	<script type="text/javascript" src="./js/ui_builder.js"></script>
 	<script type="text/javascript" src="./js/states.js"></script>
 	<script type="text/javascript" src="./js/menu.js"></script>
-    <script type="text/javascript" src="./js/code.js"></script>
-    
-    <title>Hashi - Mastering the japanese dinner</title>
+	<script type="text/javascript" src="./js/code.js"></script>
+
+	<title>Hashi - Mastering the japanese dinner</title>
 
 </head>
 <body class="select">
-    <div id="fullpage" class="layout">
+<div id="fullpage" class="layout">
 	<div id="header">
 		<img id="logo" src="./img/Logo_Hashi.png"/>
 		<ul id="menuItems">
@@ -35,25 +35,25 @@
 	<div id="content">
 
 		<div id="about"></div>
-		<div id="code"> 
+		<div id="code">
 			<div id="code_error" class="content_menu">
 <pre>
-#define N 5<br />				
-void philosopher(int i)			
+#define N 5<br />
+void philosopher(int i)
 {
-	while(TRUE){ 
-		think(); 
-		take_fork(i); 
+	while(TRUE){
+		think();
+		take_fork(i);
 		take_fork((i+1) % N);
-		eat(); 
-		put_fork(i); 
-		put_fork((i+1) % N); 
-	} 
-} 
+		eat();
+		put_fork(i);
+		put_fork((i+1) % N);
+	}
+}
 </pre>
-</div>
-<center>Solução errada usada na primeira simulação.</center>
-			
+			</div>
+			<center>Solução errada usada na primeira simulação.</center>
+
 			<div id="code_correct" class="content_menu">
 <pre>
 #define N 	 5
@@ -108,11 +108,11 @@ void test(i)
 			<center>Solução certa usada na segunda simulação.</center>
 		</div>
 
-        <div id="cover" class="cover">
-            <div id="coverText" class="cover"></div>
-        </div>
-        <img id="intro" src="./img/Intro.png" />
-        <div id="play" class="select" onClick="next()"></div>
+		<div id="cover" class="cover">
+			<div id="coverText" class="cover"></div>
+		</div>
+		<img id="intro" src="./img/Intro.png" />
+		<div id="play" class="select" onClick="next()"></div>
 
 		<div id="philosophers">
 			<img id="phi1_t" class="philosopher thinking phi1" src="./img/Filosofo_Pensando.png" />
@@ -135,47 +135,57 @@ void test(i)
 		</div>
 
 		<div id="hands">
-			<div id="rhand5" class="right hand phi2" onclick="" />
+			<div id="rhand1" class="right hand phi1" onclick=""></div>
+			<div id="rhand2" class="right hand phi2" onclick=""></div>
+			<div id="rhand3" class="right hand phi3" onclick=""></div>
+			<div id="rhand4" class="right hand phi4" onclick=""></div>
+			<div id="rhand5" class="right hand phi5" onclick=""></div>
+
+			<div id="lhand1" class="left hand phi1" onclick=""></div>
+			<div id="lhand2" class="left hand phi2" onclick=""></div>
+			<div id="lhand3" class="left hand phi3" onclick=""></div>
+			<div id="lhand4" class="left hand phi4" onclick=""></div>
+			<div id="lhand5" class="left hand phi5" onclick=""></div>
 		</div>
-		
-		<div id="tb1"  class="tableware"> 
+
+		<div id="tb1"  class="tableware">
 			<img id="ds1" class="dish empty" src="./img/Prato.png" />
 			<img id="ds1_sp" class="dish sp" src="./img/Espaguete.png" />
 			<img id="ds1_sushi" class="dish sushi" src="./img/Sushi.png" />
 			<img id="hs1" class="hashi" src="./img/Hashi.png" />
 		</div>
-		<div id="tb2"  class="tableware"> 
+		<div id="tb2"  class="tableware">
 			<img id="ds2" class="dish" src="./img/Prato.png" />
 			<img id="ds2_sp" class="dish sp" src="./img/Espaguete.png" />
 			<img id="ds2_sushi" class="dish sushi" src="./img/Sushi.png" />
 			<img id="hs2" class="hashi" src="./img/Hashi.png" />
 		</div>
-		<div id="tb3"  class="tableware"> 
+		<div id="tb3"  class="tableware">
 			<img id="ds3" class="dish" src="./img/Prato.png" />
 			<img id="ds3_sp" class="dish sp" src="./img/Espaguete.png" />
 			<img id="ds3_sushi" class="dish sushi" src="./img/Sushi.png" />
 			<img id="hs3" class="hashi" src="./img/Hashi.png" />
 		</div>
-		<div id="tb4"  class="tableware"> 
+		<div id="tb4"  class="tableware">
 			<img id="ds4" class="dish" src="./img/Prato.png" />
 			<img id="ds4_sp" class="dish sp" src="./img/Espaguete.png" />
 			<img id="ds4_sushi" class="dish sushi" src="./img/Sushi.png" />
 			<img id="hs4" class="hashi" src="./img/Hashi.png" />
 		</div>
-		<div id="tb5"  class="tableware"> 
+		<div id="tb5"  class="tableware">
 			<img id="ds5" class="dish" src="./img/Prato.png" />
 			<img id="ds5_sp" class="dish sp" src="./img/Espaguete.png" />
 			<img id="ds5_sushi" class="dish sushi" src="./img/Sushi.png" />
 			<img id="hs5" class="hashi" src="./img/Hashi.png" />
-		</div> 
+		</div>
 
 		<img id="table" src="./img/Mesa.png" />
 
-	
+
 		<div id="prev" class="sim_nav select"></div>
 		<div id="next" class="sim_nav select"></div>
 	</div>
-    
-  </div>
+
+</div>
 </body>
 </html>
