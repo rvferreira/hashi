@@ -147,6 +147,19 @@ body {
 		z-index: -1;
 	}
 
+	#hands {
+		z-index:10;
+		height: 0;
+		width: 0;
+	}
+
+	.hand {
+		position:absolute;
+		z-index: 6;
+		border: 2px solid;
+		background-color: #FFF;
+	}
+
 	.sim_nav {
 		z-index: 4;
 		position: absolute;

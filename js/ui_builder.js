@@ -1,5 +1,6 @@
 HEADER_HEIGHT = 0.08;
 HASHI_ANGLE_OFFSET = 35;
+RHAND_ANGLE_OFFSET = -10;
 
 var language = 0; /*0 para pt_br e 1 para eng_us*/
 
@@ -101,6 +102,20 @@ jQuery(document).ready(function($){
 		top: function(){
 				return headerHeight * 1.3;
 		},
+	});
+
+	var handSize = philosopherHeight * 0.15;
+
+	$(".hand").css({
+		height: function(){
+			return handSize;
+		},
+		width: function(){
+				return handSize;
+		},
+		"border-radius": handSize,
+		left: (pageWidth-handSize)/2 - 1,
+		top: headerHeight * 3.5
 	});
 
 	var tableDiameter = (pageHeight*(6/10));
