@@ -200,6 +200,20 @@ jQuery(document).ready(function($){
     	}
     });
 
+    $("#death").css({
+    	top: 0,
+    	left: pageWidth,
+    	width: pageWidth/2 + 5,
+    });
+
+	$(".death").each(function(index){
+		$(this).css({
+			width: pageWidth/12,
+			left: pageWidth*index/12,
+			top: 0
+		});
+	});
+
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
     $("#next").css("left",(nav_button_left+(philosopherWidth/2))*1.005);
