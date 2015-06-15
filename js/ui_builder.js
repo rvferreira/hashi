@@ -118,6 +118,33 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$("#intro").css({
+		height: function(){
+			return pageHeight;
+		},
+		right: function(){
+			return 0;
+		}
+	});	
+
+	$("#play").css({
+		width: function(){
+			return pageWidth*0.05;
+		},
+		height: function(){
+			return pageWidth*0.05;
+		},
+		left: function(){
+			return (pageWidth - pageWidth*0.05)/2;
+		},
+		top: function(){
+			return (pageHeight - pageWidth*0.05)/2;
+		},
+		padding: function(){
+			return pageWidth*0.008;
+		}
+	});	
+
     var tablewareHeight = (pageHeight / 8.8);
     var tablewareWidth = tablewareHeight * 1.0;
 

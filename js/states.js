@@ -32,9 +32,10 @@ function setFrame(index){
 
     if (index <= 0){
         currentFrame = 0;
-        $("#next").click(function() {
+        $("#next, #play").click(function() {
             next();
         });
+
     }
     else if (index >= (framesCount - 1)){
         currentFrame = framesCount - 1;

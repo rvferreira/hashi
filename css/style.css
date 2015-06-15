@@ -118,6 +118,29 @@ body {
 		z-index: 0;
 	}
 
+	#intro {
+		position: absolute;
+		z-index: 0;
+	}
+
+	#play {
+		position: absolute;
+		z-index: 1;
+		background-color: #380B61;
+		opacity: 0.8;
+		border-radius: 9px;
+		-moz-border-radius: 9px;
+		-webkit-border-radius: 9px;
+		background-image: url("../img/Play.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	#play:hover {
+		opacity: 1;
+	}
+
 	.philosopher {
 		position: absolute;
 		transform: rotate(0deg);
