@@ -1,6 +1,7 @@
 HEADER_HEIGHT = 0.08;
 HASHI_ANGLE_OFFSET = 35;
 RHAND_ANGLE_OFFSET = -15;
+LHAND_ANGLE_OFFSET = 15;
 
 var language = 0; /*0 para pt_br e 1 para eng_us*/
 
@@ -225,6 +226,12 @@ jQuery(document).ready(function($){
 	$("#rhand3").css({"transform":"rotate("+(144+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (144+RHAND_ANGLE_OFFSET));
 	$("#rhand4").css({"transform":"rotate("+(216+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+RHAND_ANGLE_OFFSET));
 	$("#rhand5").css({"transform":"rotate("+(288+RHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+RHAND_ANGLE_OFFSET));
+
+	$("#lhand1").css({"transform":"rotate("+(0+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (0+LHAND_ANGLE_OFFSET));
+	$("#lhand2").css({"transform":"rotate("+(72+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (72+LHAND_ANGLE_OFFSET));
+	$("#lhand3").css({"transform":"rotate("+(144+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (144+LHAND_ANGLE_OFFSET));
+	$("#lhand4").css({"transform":"rotate("+(216+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+LHAND_ANGLE_OFFSET));
+	$("#lhand5").css({"transform":"rotate("+(288+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+LHAND_ANGLE_OFFSET));
 
 	
 	styleCode($("#code_error"));

@@ -64,13 +64,11 @@ function unsetFrame(index){
         $("#coverText").empty();
     }
 
-    if (jsonObj.states[index].rGetHashi[0]) dropHashi('r', 1);
     var objList = jsonObj.states[index].rGetHashi;
-    /*var arrayLength = objList.length; *//*
+    var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         dropHashi('r', objList[i]);
     }
-    */
 
 }
 
@@ -118,6 +116,13 @@ function setAnimations(state){
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         getHashi('r', objList[i]);
+    }
+
+    objList = state.lGetHashi;
+
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        getHashi('l', objList[i]);
     }
 }
 
