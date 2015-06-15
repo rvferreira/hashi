@@ -159,14 +159,6 @@ body {
 		background-color: #FFF;
     }
 
-    .rHandGetHashi1 {
-		-webkit-animation:rGetHashi 1s linear infinite;
-		-moz-animation:rGetHashi 1s linear infinite;
-		animation:rGetHashi 1s linear infinite;
-    }
-    @-moz-keyframes rGetHashi { 100% { -moz-transform: rotate(345deg); } }
-    @-webkit-keyframes rGetHashi { 100% { -webkit-transform: rotate(345deg); } }
-
 	.sim_nav {
 		z-index: 5;
 		position: absolute;
