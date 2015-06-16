@@ -10,9 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/animations.css" />
 
 	<script type="text/javascript" src="./js/ui_builder.js"></script>
+	<script type="text/javascript" src="./js/code.js"></script>
 	<script type="text/javascript" src="./js/states.js"></script>
 	<script type="text/javascript" src="./js/menu.js"></script>
-	<script type="text/javascript" src="./js/code.js"></script>
+	
 
 	<title>Hashi - Mastering the japanese dinner</title>
 
@@ -33,81 +34,6 @@
 		<br style="clear: both;"/>
 	</div>
 	<div id="content">
-
-		<div id="about"></div>
-		<div id="code">
-			<div id="code_error" class="content_menu">
-<pre>
-#define N 5<br />
-void philosopher(int i)
-{
-	while(TRUE){
-		think();
-		take_fork(i);
-		take_fork((i+1) % N);
-		eat();
-		put_fork(i);
-		put_fork((i+1) % N);
-	}
-}
-</pre>
-			</div>
-			<center>Solução errada usada na primeira simulação.</center>
-
-			<div id="code_correct" class="content_menu">
-<pre>
-#define N 	 5
-#define LEFT	 (i+N-1)%N 
-#define RIGHT 	 (i+1)%N
-#define THINKING 0
-#define HUNGRY 	 1
-#define EATING 	 2
-typedef int semaphore;
-int state[N];
-semaphore mutex = 1;
-semaphore s[N];
-
-void philosopher(int i)
-{
-	while(TRUE){
-		think();
-		take_forks(i);
-		eat();
-		put_forks(i);
-	}
-}
-
-void take_forks(int i)
-{
-	down(&mutex);
-	state[i] = HUNGRY;
-	test(i);
-	up(&mutex);
-	down(&s[i]);
-}
-
-void put_forks(i)
-{
-	down(&mutex);
-	state[i] = HUNGRY;
-	test(LEFT);
-	test(RIGHT);
-	up(&mutex);
-}
-void test(i)
-{
-	if(state[i]==HUNGRY && state[LEFT] != EATING && state[RIGHT] != EATING)
-	{
-		state[i] = EATING;
-		up(&s[i]);
-	}	
-}
-</pre>
-
-			</div>
-			<center>Solução certa usada na segunda simulação.</center>
-		</div>
-
 		<div id="cover" class="cover">
 			<div id="coverText" class="cover"></div>
 		</div>
@@ -191,6 +117,24 @@ void test(i)
 
 		<div id="prev" class="sim_nav select"></div>
 		<div id="next" class="sim_nav select"></div>
+
+		<div id="about"></div>
+		<div id="code">
+			<p></p>
+			<div id="code_error" class="content_menu">
+				<div id="code_error_content"></div>
+				<div id="code_error_comment"></div>
+				<br class="clear" />
+			</div>
+			<h2></h2>
+			<div id="code_correct" class="content_menu">
+				<div id="code_correct_content"></div>
+				<div id="code_correct_comment"></div>
+				<br class="clear" />
+			</div>
+			<h3></h3>
+			<div id="invisible"></div>
+		</div>
 	</div>
 
 </div>
