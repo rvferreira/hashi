@@ -1,3 +1,8 @@
+function setLang(lang){
+    language = lang;
+    unsetFrame(currentFrame);
+    setFrame(currentFrame);
+}
 
 function simulatorLink() {	
 	setObjectListInvisible(["#code","#about"]);

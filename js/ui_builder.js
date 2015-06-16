@@ -3,8 +3,6 @@ HASHI_ANGLE_OFFSET = 35;
 RHAND_ANGLE_OFFSET = -15;
 LHAND_ANGLE_OFFSET = 15;
 
-var language = 0; /*0 para pt_br e 1 para eng_us*/
-
 var pageWidth;
 var pageHeight;
 var headerHeight;

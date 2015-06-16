@@ -47,6 +47,7 @@ body {
 	}
 		#langMenu li{
 			display: inline;
+			cursor: pointer;
 		}	
 
 #content {

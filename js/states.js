@@ -2,6 +2,8 @@ var jsonObj;
 var currentFrame = 0;
 var framesCount;
 
+var language = 0; /*0 para pt_br e 1 para eng_us*/
+
 function setObjectListVisible(objList){
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
@@ -184,7 +186,8 @@ function setFrame(index){
             });
         });
 
-        $("#coverText").append(jsonObj.states[index].portugueseFrameText);
+        if (language == 0) $("#coverText").append(jsonObj.states[index].portugueseFrameText);
+        else if (language == 1) $("#coverText").append(jsonObj.states[index].englishFrameText);
     }
 
     setAnimations(jsonObj.states[index]);
