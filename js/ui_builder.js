@@ -189,7 +189,6 @@ jQuery(document).ready(function($){
 		}
 
 	});
-	
 
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
@@ -197,7 +196,7 @@ jQuery(document).ready(function($){
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
-	$(".hand").css({"transform-origin":""+(50)+"% "+(787)+"%"});
+	$(".hand").css({"transform-origin":""+(50)+"% "+(pageHeight/2 - philosopherHeight*0.35*3)+"px"});
 	
 	$(".phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
 	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
