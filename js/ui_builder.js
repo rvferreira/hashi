@@ -53,40 +53,7 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	$("#menuItems li").css({
-
-		paddingLeft: function(){
-			return pageWidth*(5/100);
-		},
-		paddingRight: function(){
-			return pageWidth*(5/100);
-		}
-	});
-	
-	$("#menuItems").css({
-		
-		fontSize: function(){
-			return headerHeight * 0.5;
-		},
-		left: function(){
-			return (pageWidth-$("#menuItems").width())/2.2;
-		}
-	});
-	
-	$(".content_menu").css({
-		width: function(){
-			return pageWidth*0.6;
-		},
-		left: function (){
-			return (pageWidth - pageWidth*0.6)/2;
-		},
-		marginTop: function(){
-			return (pageWidth*0.05);
-		},
-		padding: function(){
-			return (pageWidth*0.01);
-		}
-	});
+	menuPositioning();
 
 	var philosopherHeight = (pageHeight / 5);
 	var philosopherWidth = philosopherHeight * 224 / 300;
@@ -263,3 +230,40 @@ jQuery(document).ready(function($){
 	styleCode("code_error");
 	styleCode("code_correct");
 });
+
+function menuPositioning(){
+	$("#menuItems li").css({
+
+		paddingLeft: function(){
+			return pageWidth*(5/100);
+		},
+		paddingRight: function(){
+			return pageWidth*(5/100);
+		}
+	});
+
+	$("#menuItems").css({
+
+		fontSize: function(){
+			return headerHeight * 0.5;
+		},
+		left: function(){
+			return (pageWidth-$("#menuItems").width())/2.2;
+		}
+	});
+
+	$(".content_menu").css({
+		width: function(){
+			return pageWidth*0.6;
+		},
+		left: function (){
+			return (pageWidth - pageWidth*0.6)/2;
+		},
+		marginTop: function(){
+			return (pageWidth*0.05);
+		},
+		padding: function(){
+			return (pageWidth*0.01);
+		}
+	});
+}
