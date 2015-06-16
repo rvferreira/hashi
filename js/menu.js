@@ -2,6 +2,17 @@ function setLang(lang){
     language = lang;
     unsetFrame(currentFrame);
     setFrame(currentFrame);
+
+    if (lang == 0) {
+        $("#simLink").text("Simulador");
+        $("#codLink").text("Códigos");
+        $("#abtLink").text("Sobre");
+    }
+    else if (lang ==1) {
+        $("#simLink").text("Simulator");
+        $("#codLink").text("Codes");
+        $("#abtLink").text("About");
+    }
 }
 
 function simulatorLink() {	
