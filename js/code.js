@@ -196,9 +196,11 @@ function codeLanguageComment(lang){
 
 function contentAbout(lang){
 	if (!lang){
-		$("#content_about").html("Esse trabalho foi realizado para a disciplina de Sistemas Operacionais <br />"+ 
-			"ministrada pelo Prof. 	Dr. Paulo Sérgio Lopes de Souza à turma de Engenharia de Computação "+
-			"- USP São Carlos.");
+		$("#content_about").html("Trabalho realizado dentro das dependências da Universidade de São Paulo, "+
+		 "como parte do conteúdo da disciplina de Sistemas Operacionais, sob orientação do Prof. Paulo Sérgio"+ 
+		 " Lopes de Souza.<br /> <br />"+
+		 "Todo o projeto foi desenvolvido com ferramentas abertas e o código está disponível no link:"+
+		 "<a href='https://github.com/rvferreira/hashi' target='_blank'> código </a>");
 	}
 	else{
 		$("#content_about").html("hi");
