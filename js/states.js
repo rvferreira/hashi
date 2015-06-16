@@ -117,7 +117,6 @@ function getHashi(side, philosopher){
 
 function setAnimations(state){
     var objList = state.rGetHashi;
-
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         getHashi('r', objList[i]);
@@ -129,6 +128,15 @@ function setAnimations(state){
     for (var i = 0; i < arrayLength; i++) {
         getHashi('l', objList[i]);
     }
+
+    if (state.highlightTarget == "death"){
+        $("#death").animate({
+            left: '-100%',
+        }, 8000, function(){
+            $(this).css({'left':'100%'});
+        });
+    }
+
 }
 
 function setFrame(index){

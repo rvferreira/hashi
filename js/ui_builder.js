@@ -201,17 +201,27 @@ jQuery(document).ready(function($){
     });
 
     $("#death").css({
-    	top: 0,
-    	left: pageWidth,
-    	width: pageWidth/2 + 5,
+    	left: "100%",
+    	top: headerHeight * 1.5,
+    	width: pageWidth/2,
     });
 
 	$(".death").each(function(index){
-		$(this).css({
-			width: pageWidth/12,
-			left: pageWidth*index/12,
-			top: 0
-		});
+		if (index > 0){
+			$(this).css({
+				width: pageWidth/20,
+				left: pageWidth*index/20 + pageWidth/10,
+				top: (index % 2) * 50
+			});
+		}
+		else {
+			$(this).css({
+				width: pageWidth/10,
+				left: 0,
+				top: 0
+			});
+		}
+
 	});
 
     var nav_button_left = pageWidth*(5.1/7);
