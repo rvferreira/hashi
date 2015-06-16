@@ -189,10 +189,15 @@ jQuery(document).ready(function($){
 		}
 
 	});
+	
+	var character_photo = pageWidth*0.002;
+	$(".img_photo").css({
+    	width: character_photo
+    });
 
-	$("#about").css({
+	$("#about, #about pre").css({
 		fontSize: function(){
-			return headerHeight * 0.3;
+			return character_photo*5;
 		}
 	});
 

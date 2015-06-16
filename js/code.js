@@ -206,7 +206,7 @@ function contentAbout(lang){
 		 "<img src='./img/Andressa.jpg' class='photo_img' />"+
 		 "<img src='./img/Jessika.jpg' 	class='photo_img' />"+
 		 "<img src='./img/Raphael.jpg' 	class='photo_img' /><br/>"+
-		 "<pre>Andressa Andrião	Jéssika Darambaris	Raphael V. Ferreira</pre>"+
+		 "<pre> Andressa Andrião	   Jéssika Darambaris	  Raphael V. Ferreira</pre>"+
 		 "<br class='clear' />"+
 		 "");
 	}
