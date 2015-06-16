@@ -19,6 +19,8 @@ function setLang(lang){
         $("#codLink").text("Codes");
         $("#abtLink").text("About");
     }
+
+    menuPositioning();
 }
 
 function simulatorLink() {	
