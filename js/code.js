@@ -70,7 +70,8 @@ function contentCode(){
 		"}<br/><br/>"+
 		"void test(i)<br/>"+
 		"{<br/>"+
-		"	if(state[i]==HUNGRY && state[LEFT] != EATING && state[RIGHT] != EATING)<br/>"+
+		"	if(state[i]==HUNGRY && state[LEFT] != EATING<br/>"+
+		"		&& state[RIGHT] != EATING)<br/>"+
 		"	{<br/>"+
 		"		state[i] = EATING;<br/>"+
 		"        up(&s[i]);<br/>"+
@@ -192,5 +193,16 @@ function codeLanguageComment(lang){
 	}
 }
 
+
+function contentAbout(lang){
+	if (!lang){
+		$("#content_about").html("Esse trabalho foi realizado para a disciplina de Sistemas Operacionais <br />"+ 
+			"ministrada pelo Prof. 	Dr. Paulo Sérgio Lopes de Souza à turma de Engenharia de Computação "+
+			"- USP São Carlos.");
+	}
+	else{
+		$("#content_about").html("hi");
+	}
+}
 
 

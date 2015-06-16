@@ -6,6 +6,9 @@ function setLang(lang){
     codeLanguageComment(lang);
     styleCode("code_error");
     styleCode("code_correct");
+
+    contentAbout(lang);
+
     if (lang == 0) {
         $("#simLink").text("Simulador");
         $("#codLink").text("Códigos");

@@ -71,10 +71,10 @@ pre {
 		height: 100%;
 	}
 
-		#code .content_menu {
+		 .content_menu {
 			border:1px solid #c0c0c0;
 			position: relative;
-
+		
 			border-radius: 8px;
 			-moz-border-radius: 8px;
 			-webkit-border-radius: 8px;
