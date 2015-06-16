@@ -132,9 +132,11 @@ function codeLanguageComment(lang){
 		
 		$("#code p").html("<center>Os algoritmos dessa página foram retirados "+
 			"do livro: <br />TANENBAUM, Andrew S., Sistemas operacionais modernos, 3ed.  <center>");
+		
 		$("#code h2").html("<center>Solução errada para o problema do jantar dos filósofos"+
 		 "<br />Algoritmo usado na primeira simulação.");	
-		$("#code h3").html("<center>Uma solução para para o problema do jantar dos filósofos"+
+		
+		$("#code h3").html("<center>Uma solução para o problema do jantar dos filósofos"+
 		 "<br />Algoritmo usado na segunda simulação.");	
 	}
 	else {
@@ -190,6 +192,7 @@ function codeLanguageComment(lang){
 
 		$("#code h2").html("<center>Nonsolution to the dining philosophers problem."+
 		 "<br />Algorithm used in the first simulation.</center>");	
+		
 		$("#code h3").html("<center>A solution to the dining philosophers problem."+
 		 "<br />Algorithm used in the second simulation<center/>");	
 
@@ -202,17 +205,27 @@ function contentAbout(lang){
 		$("#content_about").html("Trabalho realizado dentro das dependências da Universidade de São Paulo, "+
 		 "como parte do conteúdo da disciplina de Sistemas Operacionais, sob orientação do Prof. Paulo Sérgio"+ 
 		 " Lopes de Souza.<br /> <br />"+
-		 "Código desenvolvido pelos alunos:<br />"+ 
-		 "<img src='./img/Andressa.jpg' class='photo_img' />"+
+		 "Código desenvolvido pelos alunos:<br />");
+
+	}
+	else{
+		$("#content_about").html("hi");
+	}
+
+
+	$("#content_about").append("<img src='./img/Andressa.jpg' class='photo_img' />"+
 		 "<img src='./img/Jessika.jpg' 	class='photo_img' />"+
 		 "<img src='./img/Raphael.jpg' 	class='photo_img' /><br/>"+
 		 "<pre> Andressa Andrião	   Jéssika Darambaris	  Raphael V. Ferreira</pre>"+
 		 "<br class='clear' />"+
 		 "");
-	}
-	else{
-		$("#content_about").html("hi");
-	}
 }
 
-
+function contentSimulator(lang){
+	if (!lang){
+		$(".title").html("Jantar dos Filósofos");
+	}
+	else {
+		$(".title").html("Philosopher's Dinner");
+	}
+}

@@ -108,6 +108,21 @@ jQuery(document).ready(function($){
 		}
 	});	
 
+	$(".title").css({
+		fontSize: function(){
+			return pageWidth*0.04;
+		},
+		width: function(){
+			return pageWidth*0.6;
+		},
+		left: function(){
+			return (pageWidth - pageWidth*0.37)/2;
+		},
+		top: function(){
+			return pageHeight/5;
+		}
+	});	
+
 	$("#play").css({
 		width: function(){
 			return pageWidth*0.05;
@@ -123,6 +138,9 @@ jQuery(document).ready(function($){
 		},
 		padding: function(){
 			return pageWidth*0.008;
+		},
+		backgroundSize: function(){
+			return pageWidth*0.05;
 		}
 	});	
 
@@ -195,6 +213,7 @@ jQuery(document).ready(function($){
     	width: character_photo
     });
 
+
 	$("#about, #about pre").css({
 		fontSize: function(){
 			return character_photo*5;
@@ -236,6 +255,7 @@ jQuery(document).ready(function($){
 
 	contentAbout(0);
 	contentCode();
+	contentSimulator(0);
 	codeLanguageComment(0);
 	styleCode("code_error");
 	styleCode("code_correct");
