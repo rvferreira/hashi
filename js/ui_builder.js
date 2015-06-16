@@ -53,40 +53,7 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	$("#menuItems li").css({
-
-		paddingLeft: function(){
-			return pageWidth*(5/100);
-		},
-		paddingRight: function(){
-			return pageWidth*(5/100);
-		}
-	});
-	
-	$("#menuItems").css({
-		
-		fontSize: function(){
-			return headerHeight * 0.5;
-		},
-		left: function(){
-			return (pageWidth-$("#menuItems").width())/2.2;
-		}
-	});
-	
-	$(".content_menu").css({
-		width: function(){
-			return pageWidth*0.6;
-		},
-		left: function (){
-			return (pageWidth - pageWidth*0.6)/2;
-		},
-		marginTop: function(){
-			return (pageWidth*0.05);
-		},
-		padding: function(){
-			return (pageWidth*0.01);
-		}
-	});
+	menuPositioning();
 
 	var philosopherHeight = (pageHeight / 5);
 	var philosopherWidth = philosopherHeight * 224 / 300;
@@ -222,7 +189,6 @@ jQuery(document).ready(function($){
 		}
 
 	});
-	
 
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
@@ -230,7 +196,7 @@ jQuery(document).ready(function($){
 
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
-	$(".hand").css({"transform-origin":""+(50)+"% "+(787)+"%"});
+	$(".hand").css({"transform-origin":""+(50)+"% "+(pageHeight/2 - philosopherHeight*0.35*3)+"px"});
 	
 	$(".phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
 	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
@@ -263,3 +229,40 @@ jQuery(document).ready(function($){
 	styleCode("code_error");
 	styleCode("code_correct");
 });
+
+function menuPositioning(){
+	$("#menuItems li").css({
+
+		paddingLeft: function(){
+			return pageWidth*(5/100);
+		},
+		paddingRight: function(){
+			return pageWidth*(5/100);
+		}
+	});
+
+	$("#menuItems").css({
+
+		fontSize: function(){
+			return headerHeight * 0.5;
+		},
+		left: function(){
+			return (pageWidth-$("#menuItems").width())/2.2;
+		}
+	});
+
+	$(".content_menu").css({
+		width: function(){
+			return pageWidth*0.6;
+		},
+		left: function (){
+			return (pageWidth - pageWidth*0.6)/2;
+		},
+		marginTop: function(){
+			return (pageWidth*0.05);
+		},
+		padding: function(){
+			return (pageWidth*0.01);
+		}
+	});
+}
