@@ -117,6 +117,15 @@ pre {
 		background-color: #fff;
 		font-size:18px;
 	}
+
+		#about .photo_img {
+			width: 20%;
+			margin: 2% 2% 0 0;
+		}
+		#about span {
+			width: 100%;
+			float: none;
+		}
 	#cover {
 		display: none;
 		width: 100%;

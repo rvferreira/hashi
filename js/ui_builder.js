@@ -190,6 +190,12 @@ jQuery(document).ready(function($){
 
 	});
 
+	$("#about").css({
+		fontSize: function(){
+			return headerHeight * 0.3;
+		}
+	});
+
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
     $("#next").css("left",(nav_button_left+(philosopherWidth/2))*1.005);
