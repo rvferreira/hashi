@@ -115,6 +115,7 @@ pre {
 		position: absolute;
 		z-index: 6;
 		background-color: #fff;
+		font-size:18px;
 	}
 	#cover {
 		display: none;

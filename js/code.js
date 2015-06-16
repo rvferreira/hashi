@@ -199,8 +199,8 @@ function contentAbout(lang){
 		$("#content_about").html("Trabalho realizado dentro das dependências da Universidade de São Paulo, "+
 		 "como parte do conteúdo da disciplina de Sistemas Operacionais, sob orientação do Prof. Paulo Sérgio"+ 
 		 " Lopes de Souza.<br /> <br />"+
-		 "Todo o projeto foi desenvolvido com ferramentas abertas e o código está disponível no link:"+
-		 "<a href='https://github.com/rvferreira/hashi' target='_blank'> código </a>");
+		 "Código desenvolvido pelos alunos: <br />"+
+		 "");
 	}
 	else{
 		$("#content_about").html("hi");
