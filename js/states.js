@@ -2,6 +2,8 @@ var jsonObj;
 var currentFrame = 0;
 var framesCount;
 
+var language = 0; /*0 para pt_br e 1 para eng_us*/
+
 function setObjectListVisible(objList){
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
@@ -117,7 +119,6 @@ function getHashi(side, philosopher){
 
 function setAnimations(state){
     var objList = state.rGetHashi;
-
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         getHashi('r', objList[i]);
@@ -129,6 +130,15 @@ function setAnimations(state){
     for (var i = 0; i < arrayLength; i++) {
         getHashi('l', objList[i]);
     }
+
+    if (state.highlightTarget == "death"){
+        $("#death").animate({
+            left: '-100%',
+        }, 8000, function(){
+            $(this).css({'left':'100%'});
+        });
+    }
+
 }
 
 function setFrame(index){
@@ -175,8 +185,9 @@ function setFrame(index){
                 width: elementHeight/proportion
             });
         });
-
-        $("#coverText").append(jsonObj.states[index].portugueseFrameText);
+      
+        if (language == 0) $("#coverText").append(jsonObj.states[index].portugueseFrameText);
+        else if (language == 1) $("#coverText").append(jsonObj.states[index].englishFrameText);
     }
 
     setAnimations(jsonObj.states[index]);

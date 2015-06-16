@@ -3,8 +3,6 @@ HASHI_ANGLE_OFFSET = 35;
 RHAND_ANGLE_OFFSET = -15;
 LHAND_ANGLE_OFFSET = 15;
 
-var language = 0; /*0 para pt_br e 1 para eng_us*/
-
 var pageWidth;
 var pageHeight;
 var headerHeight;
@@ -198,21 +196,33 @@ jQuery(document).ready(function($){
     	marginBottom: function(){
     		return philosopherWidth/14;
     	}
-    });
+    })
+ 
 
     $("#death").css({
-    	top: 0,
-    	left: pageWidth,
-    	width: pageWidth/2 + 5,
+    	left: "100%",
+    	top: headerHeight * 1.5,
+    	width: pageWidth/2,
     });
 
 	$(".death").each(function(index){
-		$(this).css({
-			width: pageWidth/12,
-			left: pageWidth*index/12,
-			top: 0
-		});
+		if (index > 0){
+			$(this).css({
+				width: pageWidth/20,
+				left: pageWidth*index/20 + pageWidth/10,
+				top: (index % 2) * 50
+			});
+		}
+		else {
+			$(this).css({
+				width: pageWidth/10,
+				left: 0,
+				top: 0
+			});
+		}
+
 	});
+	
 
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
@@ -247,7 +257,9 @@ jQuery(document).ready(function($){
 	$("#lhand4").css({"transform":"rotate("+(216+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+LHAND_ANGLE_OFFSET));
 	$("#lhand5").css({"transform":"rotate("+(288+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+LHAND_ANGLE_OFFSET));
 
-	
-	styleCode($("#code_error"));
-	styleCode($("#code_correct"));
+	contentAbout(0);
+	contentCode();
+	codeLanguageComment(0);
+	styleCode("code_error");
+	styleCode("code_correct");
 });

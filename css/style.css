@@ -2,6 +2,13 @@ body {
 	overflow-x:hidden;
 	overflow-y:hidden;
 }
+
+pre {
+	-webkit-tab-size: 4;/* Chrome and Safari */
+	-moz-tab-size: 4; /* Code for Firefox */
+    -o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+    tab-size: 4;
+}
 #header{
 	color: #FFF;
 	background-color: #380B61;
@@ -11,7 +18,7 @@ body {
 	/* id img logo */
 	#logo{
 		float: left;
-
+		cursor: pointer;
 	}
 
 	#menuItems {
@@ -47,6 +54,7 @@ body {
 	}
 		#langMenu li{
 			display: inline;
+			cursor: pointer;
 		}	
 
 #content {
@@ -57,16 +65,16 @@ body {
 	#code {
 		display: none;
 		width: 100%;
-		height: 100%;
 		position: absolute;
 		z-index: 6;
 		background-color: #fff;
+		height: 100%;
 	}
 
-		#code .content_menu {
+		 .content_menu {
 			border:1px solid #c0c0c0;
 			position: relative;
-
+		
 			border-radius: 8px;
 			-moz-border-radius: 8px;
 			-webkit-border-radius: 8px;
@@ -75,6 +83,30 @@ body {
 			-moz-box-shadow : inset 0 0 5px #ccc;
 			-webkit-box-shadow : inset 0 0 5px #ccc;
 
+		}
+		#code_error_content, #code_correct_content {
+			float:left;
+		}
+		#code_error_comment, #code_correct_comment {
+			float: left;
+			margin-left: 2%;
+			
+		}
+
+		#code h2, h3 {
+			font-style: none;
+			color: #380B61;
+			font-family: Arial, Helvetica, Verdana;	
+			font-size: 14px;
+		}
+
+		#code p {
+			font-size: 22px;
+			margin-top: 2%;
+			color: #380B61;
+		}
+		#invisible{
+			height:15%;
 		}
 	#about {
 		display: none;
@@ -150,16 +182,10 @@ body {
 	#death {
 		position: absolute;
 		z-index: -1;
-		padding: 0;
-		margin: 0;
-		border: 0;
 	}
 		.death {
         		position: relative;
         		z-index: -1;
-        		padding: 0;
-        		margin: 0;
-        		border: 0;
         	}
 
 	#hands {
