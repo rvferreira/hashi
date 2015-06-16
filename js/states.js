@@ -185,7 +185,7 @@ function setFrame(index){
                 width: elementHeight/proportion
             });
         });
-
+      
         if (language == 0) $("#coverText").append(jsonObj.states[index].portugueseFrameText);
         else if (language == 1) $("#coverText").append(jsonObj.states[index].englishFrameText);
     }

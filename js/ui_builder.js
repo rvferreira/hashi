@@ -196,7 +196,8 @@ jQuery(document).ready(function($){
     	marginBottom: function(){
     		return philosopherWidth/14;
     	}
-    });
+    })
+ 
 
     $("#death").css({
     	left: "100%",
@@ -221,6 +222,7 @@ jQuery(document).ready(function($){
 		}
 
 	});
+	
 
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
@@ -255,7 +257,8 @@ jQuery(document).ready(function($){
 	$("#lhand4").css({"transform":"rotate("+(216+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+LHAND_ANGLE_OFFSET));
 	$("#lhand5").css({"transform":"rotate("+(288+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+LHAND_ANGLE_OFFSET));
 
-	
-	styleCode($("#code_error"));
-	styleCode($("#code_correct"));
+	contentCode();
+	codeLanguageComment(0);
+	styleCode("code_error");
+	styleCode("code_correct");
 });
