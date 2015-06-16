@@ -72,8 +72,8 @@ function contentCode(){
 		"{<br/>"+
 		"	if(state[i]==HUNGRY && state[LEFT] != EATING && state[RIGHT] != EATING)<br/>"+
 		"	{<br/>"+
-		"	state[i] = EATING;<br/>"+
-		"	up(&s[i]);<br/>"+
+		"		state[i] = EATING;<br/>"+
+		"        up(&s[i]);<br/>"+
 		"	}<br/>"+	
 	"}</pre>");
 
@@ -128,6 +128,12 @@ function codeLanguageComment(lang){
 			"<br/><br/>"+
 			"/* i: o número do filósofo, de 0 a N-1 */<br/><br/>"+
 			"</pre>"); 
+		
+		$("#code p").html("<center>Soluções do livro Sistemas Operacionais Modernos, TANENBAUM.<center>");
+		$("#code h2").html("<center>Solução errada para o problema do jantar dos filósofos"+
+		 "<br />Algoritmo usado na primeira simulação.");	
+		$("#code h3").html("<center>Uma solução para para o problema do jantar dos filósofos"+
+		 "<br />Algoritmo usado na segunda simulação.");	
 	}
 	else {
 		
@@ -176,6 +182,13 @@ function codeLanguageComment(lang){
 			"<br/><br/>"+
 			"/* i: philosopher number, from 0 to N−1 */<br/><br/>"+
 			"</pre>");
+		
+		$("#code p").html("<center>Solutions from the book Modern Operating Systems, TANENBAUM.<center>");
+		$("#code h2").html("<center>Nonsolution to the dining philosophers problem."+
+		 "<br />Algorithm used in the first simulation.</center>");	
+		$("#code h3").html("<center>A solution to the dining philosophers problem."+
+		 "<br />Algorithm used in the second simulation<center/>");	
+
 	}
 }
 

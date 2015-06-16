@@ -2,6 +2,13 @@ body {
 	overflow-x:hidden;
 	overflow-y:hidden;
 }
+
+pre {
+	-webkit-tab-size: 4;/* Chrome and Safari */
+	-moz-tab-size: 4; /* Code for Firefox */
+    -o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+    tab-size: 4;
+}
 #header{
 	color: #FFF;
 	background-color: #380B61;
@@ -85,8 +92,21 @@ body {
 			margin-left: 2%;
 			
 		}
-		#code_correct {
-			margin-bottom:4%;
+
+		#code h2, h3 {
+			font-style: none;
+			color: #380B61;
+			font-family: Arial, Helvetica, Verdana;	
+			font-size: 14px;
+		}
+
+		#code p {
+			font-size: 22px;
+			margin-top: 2%;
+			color: #380B61;
+		}
+		#invisible{
+			height:15%;
 		}
 	#about {
 		display: none;
