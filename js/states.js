@@ -117,6 +117,8 @@ function getHashi(side, philosopher){
         $("#hs"+hashi).addClass(side+"HandGetHashi"+philosopher);
 }
 
+function passToken
+
 function setAnimations(state){
     var objList = state.rGetHashi;
     var arrayLength = objList.length;
