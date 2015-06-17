@@ -213,9 +213,9 @@ function contentAbout(lang){
 	}
 
 
-	$("#content_about").append("<img src='./img/Andressa.jpg' class='photo_img' />"+
-		 "<img src='./img/Jessika.jpg' 	class='photo_img' />"+
-		 "<img src='./img/Raphael.jpg' 	class='photo_img' /><br/>"+
+	$("#content_about").append("<img src='./img/Andressa.png' class='photo_img' />"+
+		 "<img src='./img/Jessika.png' 	class='photo_img' />"+
+		 "<img src='./img/Raphael.png' 	class='photo_img' /><br/>"+
 		 "<pre> Andressa Andrião	   Jéssika Darambaris	  Raphael V. Ferreira</pre>"+
 		 "<br class='clear' />"+
 		 "");
