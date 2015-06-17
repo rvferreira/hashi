@@ -188,7 +188,7 @@ function codeLanguageComment(lang){
 			"</pre>");
 		
 		$("#code p").html("<center><center>The algorithms in this page were taken from the book: "+
-			"<br />TANENBAUM, Andrew S., Moderns Operating Systems, 3th.  <center>");
+			"<br />TANENBAUM, Andrew S., Modern Operating Systems, 3th.  <center>");
 
 		$("#code h2").html("<center>Nonsolution to the dining philosophers problem."+
 		 "<br />Algorithm used in the first simulation.</center>");	
