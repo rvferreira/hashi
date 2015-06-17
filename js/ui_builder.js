@@ -85,7 +85,7 @@ jQuery(document).ready(function($){
 		top: handTop
 	});
 
-<<<<<<< HEAD
+
 	$("#legend").css({
 		padding: function(){
 			return pageWidth*0.02;
@@ -102,9 +102,9 @@ jQuery(document).ready(function($){
 	});
 
 	
-=======
+
 	$(".hand").data('top', handTop);
->>>>>>> d9655310961dd2f79af6ec03f331ea3ab8e3929a
+
 
 	var tableDiameter = (pageHeight*(6/10));
 
