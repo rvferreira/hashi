@@ -7,6 +7,7 @@ var pageWidth;
 var pageHeight;
 var headerHeight;
 var table;
+var philosopherHeight;
 
 jQuery(document).ready(function($){
 
@@ -54,7 +55,7 @@ jQuery(document).ready(function($){
 	
 	menuPositioning();
 
-	var philosopherHeight = (pageHeight / 5);
+	philosopherHeight = (pageHeight / 5);
 	var philosopherWidth = philosopherHeight * 224 / 300;
 
 	$(".philosopher").css({
@@ -70,6 +71,7 @@ jQuery(document).ready(function($){
 	});
 
 	var handSize = philosopherHeight * 0.15;
+	var handTop = headerHeight * 3.5;
 
 	$(".hand").css({
 		height: function(){
@@ -80,9 +82,10 @@ jQuery(document).ready(function($){
 		},
 		"border-radius": handSize,
 		left: (pageWidth-handSize)/2 - 1,
-		top: headerHeight * 3.5
+		top: handTop
 	});
 
+<<<<<<< HEAD
 	$("#legend").css({
 		padding: function(){
 			return pageWidth*0.02;
@@ -99,6 +102,9 @@ jQuery(document).ready(function($){
 	});
 
 	
+=======
+	$(".hand").data('top', handTop);
+>>>>>>> d9655310961dd2f79af6ec03f331ea3ab8e3929a
 
 	var tableDiameter = (pageHeight*(6/10));
 
@@ -240,9 +246,7 @@ jQuery(document).ready(function($){
     $("#prev").css("left",nav_button_left);
     $("#next").css("left",(nav_button_left+(philosopherWidth/2))*1.005);
 
-	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
-	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
-	$(".hand").css({"transform-origin":""+(50)+"% "+(pageHeight/2 - philosopherHeight*0.35*3)+"px"});
+	setRotationCenter();
 	
 	$(".phi1, #tb1 > img").css({"transform":"rotate("+0+"deg)"});
 	$(".phi2, #tb2 > img").css({"transform":"rotate("+72+"deg)"});
@@ -277,6 +281,12 @@ jQuery(document).ready(function($){
 	styleCode("code_error");
 	styleCode("code_correct");
 });
+
+function setRotationCenter(){
+	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
+	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
+	$(".hand").css({"transform-origin":""+(50)+"% "+(pageHeight/2 - philosopherHeight*0.35*3)+"px"});
+}
 
 function menuPositioning(){
 	$("#menuItems li").css({
