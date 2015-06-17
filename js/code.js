@@ -63,7 +63,7 @@ function contentCode(){
 		"void put_forks(i)<br/>"+
 		"{<br/>"+
 		"	down(&mutex);<br/>"+
-		"	state[i] = HUNGRY;<br/>"+
+		"	state[i] = THINKING;<br/>"+
 		"	test(LEFT);<br/>"+
 		"	test(RIGHT);<br/>"+
 		"	up(&mutex);<br/>"+
@@ -130,10 +130,13 @@ function codeLanguageComment(lang){
 			"/* i: o número do filósofo, de 0 a N-1 */<br/><br/>"+
 			"</pre>"); 
 		
-		$("#code p").html("<center>Soluções do livro Sistemas Operacionais Modernos, TANENBAUM.<center>");
+		$("#code p").html("<center>Os algoritmos dessa página foram retirados "+
+			"do livro: <br />TANENBAUM, Andrew S., Sistemas operacionais modernos, 3ed.  <center>");
+		
 		$("#code h2").html("<center>Solução errada para o problema do jantar dos filósofos"+
 		 "<br />Algoritmo usado na primeira simulação.");	
-		$("#code h3").html("<center>Uma solução para para o problema do jantar dos filósofos"+
+		
+		$("#code h3").html("<center>Uma solução para o problema do jantar dos filósofos"+
 		 "<br />Algoritmo usado na segunda simulação.");	
 	}
 	else {
@@ -184,9 +187,12 @@ function codeLanguageComment(lang){
 			"/* i: philosopher number, from 0 to N−1 */<br/><br/>"+
 			"</pre>");
 		
-		$("#code p").html("<center>Solutions from the book Modern Operating Systems, TANENBAUM.<center>");
+		$("#code p").html("<center><center>The algorithms to this page were taken from the book: "+
+			"<br />TANENBAUM, Andrew S., Moderns Operating Systems, 3th.  <center>");
+
 		$("#code h2").html("<center>Nonsolution to the dining philosophers problem."+
 		 "<br />Algorithm used in the first simulation.</center>");	
+		
 		$("#code h3").html("<center>A solution to the dining philosophers problem."+
 		 "<br />Algorithm used in the second simulation<center/>");	
 
@@ -196,13 +202,30 @@ function codeLanguageComment(lang){
 
 function contentAbout(lang){
 	if (!lang){
-		$("#content_about").html("Esse trabalho foi realizado para a disciplina de Sistemas Operacionais <br />"+ 
-			"ministrada pelo Prof. 	Dr. Paulo Sérgio Lopes de Souza à turma de Engenharia de Computação "+
-			"- USP São Carlos.");
+		$("#content_about").html("Trabalho realizado dentro das dependências da Universidade de São Paulo, "+
+		 "como parte do conteúdo da disciplina de Sistemas Operacionais, sob orientação do Prof. Paulo Sérgio"+ 
+		 " Lopes de Souza.<br /> <br />"+
+		 "Código desenvolvido pelos alunos:<br />");
+
 	}
 	else{
 		$("#content_about").html("hi");
 	}
+
+
+	$("#content_about").append("<img src='./img/Andressa.jpg' class='photo_img' />"+
+		 "<img src='./img/Jessika.jpg' 	class='photo_img' />"+
+		 "<img src='./img/Raphael.jpg' 	class='photo_img' /><br/>"+
+		 "<pre> Andressa Andrião	   Jéssika Darambaris	  Raphael V. Ferreira</pre>"+
+		 "<br class='clear' />"+
+		 "");
 }
 
-
+function contentSimulator(lang){
+	if (!lang){
+		$(".title").html("Jantar dos Filósofos");
+	}
+	else {
+		$(".title").html("Philosopher's Dinner");
+	}
+}

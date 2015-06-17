@@ -77,10 +77,22 @@ function unsetFrame(index){
     for (var i = 0; i < arrayLength; i++) {
         dropHashi('l', objList[i]);
     }
+
+    objList = state.rPassToken;
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        stopPassingToken('r', objList[i]);
+    }
+
+    objList = state.lPassToken;
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        stopPassingToken('l', objList[i]);
+    }
 }
 
 function dropHashi(side, philosopher){
-       var r;
+        var r;
 
         if (side == 'r') {
             r = $("#"+side+"hand"+philosopher).data('rot') + 20;
@@ -117,9 +129,36 @@ function getHashi(side, philosopher){
         $("#hs"+hashi).addClass(side+"HandGetHashi"+philosopher);
 }
 
-function passToken
+function stopPassingToken(side, philosopher){
+    var r;
+
+    if (side == 'r') {
+        r = $("#"+side+"hand"+philosopher).data('rot') + 20;
+    }
+    else if (side == 'l') {
+        r = $("#"+side+"hand"+philosopher).data('rot') - 20;
+    }
+    $("#"+side+"hand"+philosopher).css({"transform":"rotate("+r+"deg)"}).data('rot', r);
+    $("#"+side+"hand"+philosopher).removeClass(side+"HandPassToken"+philosopher);
+}
+
+function passToken(side, philosopher){
+    var r;
+
+    if (side == 'r') {
+        r = $("#"+side+"hand"+philosopher).data('rot') - 20;
+    }
+    else if (side == 'l') {
+        r = $("#"+side+"hand"+philosopher).data('rot') + 20;
+    }
+    $("#"+side+"hand"+philosopher).css({"transform":"rotate("+r+"deg)"}).data('rot', r);
+    $("#"+side+"hand"+philosopher).addClass(side+"HandPassToken"+philosopher);
+}
 
 function setAnimations(state){
+
+    passToken('r', 1);
+
     var objList = state.rGetHashi;
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
@@ -127,10 +166,21 @@ function setAnimations(state){
     }
 
     objList = state.lGetHashi;
-
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         getHashi('l', objList[i]);
+    }
+
+    objList = state.rPassToken;
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        passToken('r', objList[i]);
+    }
+
+    objList = state.lPassToken;
+    var arrayLength = objList.length;
+    for (var i = 0; i < arrayLength; i++) {
+        passToken('l', objList[i]);
     }
 
     if (state.highlightTarget == "death"){

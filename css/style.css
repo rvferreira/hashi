@@ -115,7 +115,16 @@ pre {
 		position: absolute;
 		z-index: 6;
 		background-color: #fff;
+		font-size:18px;
+		font: Arial, Helvetica, Verdana;
 	}
+
+		#about .photo_img {
+			width: 20%;
+			margin: 2% 2% 0 0;
+		}
+
+		
 	#cover {
 		display: none;
 		width: 100%;
@@ -143,6 +152,8 @@ pre {
 		letter-spacing: 2px;
 		word-spacing: 2px;
 		border-radius: 30px;
+		text-align: justify;
+
 	}
 
 	#table {
@@ -153,6 +164,12 @@ pre {
 	#intro {
 		position: absolute;
 		z-index: 0;
+	}
+	.title {
+		color:#ccc;
+		z-index: 0;
+		position: absolute;
+		font-family: Arial,Helvetica,Verdana;
 	}
 
 	#play {
