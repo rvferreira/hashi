@@ -112,7 +112,7 @@ function codeLanguageComment(lang){
 			"/* pega dois garfos ou bloqueia */<br/>"+
 			"/* Hummm! Espaguete! */<br/>"+
 			"/* devolve os dois garfos à mesa */<br/>"+
-			"</br><br/>"+
+			"</br><br/><br/>"+
 			"/* i: o número do filósofo, de 0 a N-1 */<br/><br/>"+
 			"/* entra na região crítica */<br/>"+
 			"/* registra que o filósofo está faminto */<br/>"+
@@ -155,7 +155,7 @@ function codeLanguageComment(lang){
 		$("#code_correct_comment").html("<pre>"+
 			"/* number of philosophers */<br/>"+
 			"/* number of i’s left neighbor */<br/>"+
-			"/* nnumber of i’s right neighbor */<br/>"+
+			"/* number of i’s right neighbor */<br/>"+
 			"/* philosopher is thinking */<br/>"+
 			"/* philosopher is trying to get forks */<br/>"+
 			"/* philosopher is eating */<br/>"+
@@ -214,8 +214,8 @@ function contentAbout(lang){
 
 
 	$("#content_about").append("<img src='./img/Andressa.jpg' class='photo_img' />"+
-		 "<img src='./img/Jessika.jpg' 	class='photo_img' />"+
-		 "<img src='./img/Raphael.jpg' 	class='photo_img' /><br/>"+
+		 "<img src='./img/Jessika.jpg' class='photo_img' />"+
+		 "<img src='./img/Raphael.jpg' class='photo_img' /><br/>"+
 		 "<pre> Andressa Andrião	   Jéssika Darambaris	  Raphael V. Ferreira</pre>"+
 		 "<br class='clear' />"+
 		 "");
@@ -228,4 +228,20 @@ function contentSimulator(lang){
 	else {
 		$(".title").html("Philosopher's Dinner");
 	}
+}
+
+function legendContent(lang){
+	
+    if (!lang){
+    	$("#legend").html("<font color='blue'>"+
+    		"<ul> <li><font color='blue'> Filósofo pensando </font></li>"+
+    		"<font color='red'><li> Filósofo com fome</li> </font>"+
+    		"<font color='green'> <li>Filósofo comendo</li>  </font></ul>");
+    }
+    else {
+    	$("#legend").html("<font color='blue'>"+
+    		"<ul> <li><font color='blue'>Thinking philosopher</font></li>"+
+    		"<font color='red'><li>Hungry philosopher</li></font>"+
+    		"<font color='green'><li>Eating philosopher</li></font></ul>");
+    }
 }
