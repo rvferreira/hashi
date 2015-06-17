@@ -78,13 +78,13 @@ function unsetFrame(index){
         dropHashi('l', objList[i]);
     }
 
-    objList = state.rPassToken;
+    objList = jsonObj.states[index].rPassToken;
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         stopPassingToken('r', objList[i]);
     }
 
-    objList = state.lPassToken;
+    objList = jsonObj.states[index].lPassToken;
     var arrayLength = objList.length;
     for (var i = 0; i < arrayLength; i++) {
         stopPassingToken('l', objList[i]);
@@ -156,8 +156,6 @@ function passToken(side, philosopher){
 }
 
 function setAnimations(state){
-
-    passToken('r', 1);
 
     var objList = state.rGetHashi;
     var arrayLength = objList.length;
