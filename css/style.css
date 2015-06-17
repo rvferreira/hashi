@@ -1,0 +1,271 @@
+body {
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+pre {
+	-webkit-tab-size: 4;/* Chrome and Safari */
+	-moz-tab-size: 4; /* Code for Firefox */
+    -o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+    tab-size: 4;
+}
+#header{
+	color: #FFF;
+	background-color: #380B61;
+	box-shadow: inset 0 0 10px #2E0854;
+}
+	
+	/* id img logo */
+	#logo{
+		float: left;
+		cursor: pointer;
+	}
+
+	#menuItems {
+		position: absolute;
+		list-style:none;
+		white-space: nowrap;
+		z-index: 5;
+	}
+	
+		#menuItems li{
+			display: inline;
+			line-height: 200%;
+			border-right:1px solid #fff;
+			
+		}
+			#menuItems li:nth-last-child(1) {	
+				border-right: none;
+			}
+
+			#menuItems li a{
+				color:white;
+				opacity: 0.85;
+
+			}
+
+			#menuItems li a:hover {
+				opacity: 1.0;
+			}
+
+
+	#langMenu{
+		float: right;
+	}
+		#langMenu li{
+			display: inline;
+			cursor: pointer;
+		}	
+
+#content {
+	width: 100%;
+	margin:0;
+}			
+	
+	#code {
+		display: none;
+		width: 100%;
+		position: absolute;
+		z-index: 6;
+		background-color: #fff;
+		height: 100%;
+	}
+
+		 .content_menu {
+			border:1px solid #c0c0c0;
+			position: relative;
+		
+			border-radius: 8px;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+
+			box-shadow: inset 0 0 5px #ccc;
+			-moz-box-shadow : inset 0 0 5px #ccc;
+			-webkit-box-shadow : inset 0 0 5px #ccc;
+
+		}
+		#code_error_content, #code_correct_content {
+			float:left;
+		}
+		#code_error_comment, #code_correct_comment {
+			float: left;
+			margin-left: 2%;
+			
+		}
+
+		#code h2, h3 {
+			font-style: none;
+			color: #380B61;
+			font-family: Arial, Helvetica, Verdana;	
+			font-size: 14px;
+		}
+
+		#code p {
+			font-size: 22px;
+			margin-top: 2%;
+			color: #380B61;
+		}
+		#invisible{
+			height:15%;
+		}
+	#about {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 6;
+		background-color: #fff;
+		font-size:18px;
+		font: Arial, Helvetica, Verdana;
+	}
+
+		#about .photo_img {
+			width: 20%;
+			margin: 2% 2% 0 0;
+		}
+
+		
+	#cover {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 3;
+		background-color: #000;
+		opacity: 0.9;
+		text-align: justify;
+	}
+
+	#coverText {
+		position: absolute;
+		width: 60%;
+		height: 40%;
+		left: 18%;
+		top: 30%;
+		background-color: #151515;
+		color: #FFF;
+		padding: 25px;
+		font-style: oblique;
+		font-size: 20px;
+		line-height: 25px;
+	  	text-align: center;
+		letter-spacing: 2px;
+		word-spacing: 2px;
+		border-radius: 30px;
+		text-align: justify;
+
+	}
+
+	#table {
+		position:absolute;
+		z-index: 0;
+	}
+
+	#intro {
+		position: absolute;
+		z-index: 0;
+	}
+	.title {
+		color:#ccc;
+		z-index: 0;
+		position: absolute;
+		font-family: Arial,Helvetica,Verdana;
+	}
+
+	#play {
+		position: absolute;
+		z-index: 1;
+		background-color: #380B61;
+		opacity: 0.8;
+		border-radius: 9px;
+		-moz-border-radius: 9px;
+		-webkit-border-radius: 9px;
+		background-image: url("../img/Play.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+	}
+
+	#play:hover {
+		opacity: 1;
+	}
+
+	.philosopher {
+		position: absolute;
+		transform: rotate(0deg);
+		z-index: -1;
+	}
+
+	#death {
+		position: absolute;
+		z-index: -1;
+	}
+		.death {
+        		position: relative;
+        		z-index: -1;
+        	}
+
+	#hands {
+		height: 0;
+		width: 0;
+	}
+
+	.hand {
+		position:absolute;
+		z-index: 2;
+		border: 2px solid;
+		background-color: #FFF;
+    }
+
+	.sim_nav {
+		z-index: 5;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.focus {
+		z-index: 5 !important;
+	}
+
+	#prev {
+		background-image: url("../img/Anterior.png");
+
+	}
+
+	#next {
+		background-image: url("../img/Proximo.png");
+	}
+
+	.sim_nav {
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background-color:#380B61;
+		opacity: 0.8;
+		background-repeat: no-repeat;
+		background-position: center;
+		border: 1px solid #fff;
+	}
+
+	.sim_nav:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.tableware, .dish, .hashi {
+		position: absolute;
+		transform: rotate(0deg);
+		z-index: 1;
+	}
+
+.clear {
+	clear: both;		
+}
+
+.select {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+  	-ms-user-select: none;      /* IE 10+ */
+  	user-select: none;          /* Likely future */ 
+  	-khtml-user-select:none;
+  	-moz-user-select: none !important;
+}

@@ -1,0 +1,244 @@
+/*********************** Get Hashi Animations ***********************/
+
+.rHandGetHashi1 {
+    -webkit-animation:rGetHashi1 1s linear infinite;
+    -moz-animation:rGetHashi1 1s linear infinite;
+    animation:rGetHashi1 1s linear infinite;
+}
+@-moz-keyframes rGetHashi1 { 100% { -moz-transform: rotate(345deg); } }
+@-webkit-keyframes rGetHashi1 { 100% { -webkit-transform: rotate(345deg); } }
+
+.rHandGetHashi2 {
+    -webkit-animation:rGetHashi2 1s linear infinite;
+    -moz-animation:rGetHashi2 1s linear infinite;
+    animation:rGetHashi2 1s linear infinite;
+}
+@-moz-keyframes rGetHashi2 { 100% { -moz-transform: rotate(57deg); } }
+@-webkit-keyframes rGetHashi2 { 100% { -webkit-transform: rotate(57deg); } }
+
+.rHandGetHashi3 {
+    -webkit-animation:rGetHashi3 1s linear infinite;
+    -moz-animation:rGetHashi3 1s linear infinite;
+    animation:rGetHashi3 1s linear infinite;
+}
+@-moz-keyframes rGetHashi3 { 100% { -moz-transform: rotate(129deg); } }
+@-webkit-keyframes rGetHashi3 { 100% { -webkit-transform: rotate(129deg); } }
+
+.rHandGetHashi4 {
+    -webkit-animation:rGetHashi4 1s linear infinite;
+    -moz-animation:rGetHashi4 1s linear infinite;
+    animation:rGetHashi4 1s linear infinite;
+}
+@-moz-keyframes rGetHashi4 { 100% { -moz-transform: rotate(201deg); } }
+@-webkit-keyframes rGetHashi4 { 100% { -webkit-transform: rotate(201deg); } }
+
+.rHandGetHashi5 {
+    -webkit-animation:rGetHashi5 1s linear infinite;
+    -moz-animation:rGetHashi5 1s linear infinite;
+    animation:rGetHashi5 1s linear infinite;
+}
+@-moz-keyframes rGetHashi5 { 100% { -moz-transform: rotate(273deg); } }
+@-webkit-keyframes rGetHashi5 { 100% { -webkit-transform: rotate(273deg); } }
+
+.lHandGetHashi1 {
+    -webkit-animation:lGetHashi1 1s linear infinite;
+    -moz-animation:lGetHashi1 1s linear infinite;
+    animation:lGetHashi1 1s linear infinite;
+}
+@-moz-keyframes lGetHashi1 { 100% { -moz-transform: rotate(15deg); } }
+@-webkit-keyframes lGetHashi1 { 100% { -webkit-transform: rotate(15deg); } }
+
+.lHandGetHashi2 {
+    -webkit-animation:lGetHashi2 1s linear infinite;
+    -moz-animation:lGetHashi2 1s linear infinite;
+    animation:lGetHashi2 1s linear infinite;
+}
+@-moz-keyframes lGetHashi2 { 100% { -moz-transform: rotate(87deg); } }
+@-webkit-keyframes lGetHashi2 { 100% { -webkit-transform: rotate(87deg); } }
+
+.lHandGetHashi3 {
+    -webkit-animation:lGetHashi3 1s linear infinite;
+    -moz-animation:lGetHashi3 1s linear infinite;
+    animation:lGetHashi3 1s linear infinite;
+}
+@-moz-keyframes lGetHashi3 { 100% { -moz-transform: rotate(159deg); } }
+@-webkit-keyframes lGetHashi3 { 100% { -webkit-transform: rotate(159deg); } }
+
+.lHandGetHashi4 {
+    -webkit-animation:lGetHashi4 1s linear infinite;
+    -moz-animation:lGetHashi4 1s linear infinite;
+    animation:lGetHashi4 1s linear infinite;
+}
+@-moz-keyframes lGetHashi4 { 100% { -moz-transform: rotate(231deg); } }
+@-webkit-keyframes lGetHashi4 { 100% { -webkit-transform: rotate(231deg); } }
+
+.lHandGetHashi5 {
+    -webkit-animation:lGetHashi5 1s linear infinite;
+    -moz-animation:lGetHashi5 1s linear infinite;
+    animation:lGetHashi5 1s linear infinite;
+}
+@-moz-keyframes lGetHashi5 { 100% { -moz-transform: rotate(303deg); } }
+@-webkit-keyframes lGetHashi5 { 100% { -webkit-transform: rotate(303deg); } }
+
+
+/*********************** Passing Token Animations ***********************/
+
+.rHandPassToken1 {
+    -webkit-animation:rPassToken1 1s linear infinite;
+    -moz-animation:rPassToken1 1s linear infinite;
+    animation:rPassToken1 1s linear infinite;
+}
+@-moz-keyframes rPassToken1 {
+        0% { -moz-transform: rotate(345deg); }
+        50% { -moz-transform: rotate(310deg); }
+        100% { -moz-transform: rotate(345deg); }
+    }
+@-webkit-keyframes rPassToken1 {
+        0% { -webkit-transform: rotate(345deg); }
+        50% { -webkit-transform: rotate(310deg); }
+        100% { -webkit-transform: rotate(345deg); }
+    }
+
+.rHandPassToken2 {
+    -webkit-animation:rPassToken2 1s linear infinite;
+    -moz-animation:rPassToken2 1s linear infinite;
+    animation:rPassToken2 1s linear infinite;
+}
+@-moz-keyframes rPassToken2 {
+        0% { -moz-transform: rotate(57deg); }
+        50% { -moz-transform: rotate(22deg); }
+        100% { -moz-transform: rotate(57deg); }
+    }
+@-webkit-keyframes rPassToken2 {
+        0% { -webkit-transform: rotate(57deg); }
+        50% { -webkit-transform: rotate(22deg); }
+        100% { -webkit-transform: rotate(57deg); }
+    }
+
+.rHandPassToken3 {
+    -webkit-animation:rPassToken3 1s linear infinite;
+    -moz-animation:rPassToken3 1s linear infinite;
+    animation:rPassToken3 1s linear infinite;
+}
+@-moz-keyframes rPassToken3 {
+        0% { -moz-transform: rotate(129deg); }
+        50% { -moz-transform: rotate(94deg); }
+        100% { -moz-transform: rotate(129deg); }
+    }
+@-webkit-keyframes rPassToken3 {
+        0% { -webkit-transform: rotate(129deg); }
+        50% { -webkit-transform: rotate(94deg); }
+        100% { -webkit-transform: rotate(129deg); }
+    }
+
+.rHandPassToken4 {
+    -webkit-animation:rPassToken4 1s linear infinite;
+    -moz-animation:rPassToken4 1s linear infinite;
+    animation:rPassToken4 1s linear infinite;
+}
+@-moz-keyframes rPassToken4 {
+        0% { -moz-transform: rotate(201deg); }
+        50% { -moz-transform: rotate(166deg); }
+        100% { -moz-transform: rotate(201deg); }
+    }
+@-webkit-keyframes rPassToken4 {
+        0% { -webkit-transform: rotate(201deg); }
+        50% { -webkit-transform: rotate(166deg); }
+        100% { -webkit-transform: rotate(201deg); }
+    }
+
+.rHandPassToken5 {
+    -webkit-animation:rPassToken5 1s linear infinite;
+    -moz-animation:rPassToken5 1s linear infinite;
+    animation:rPassToken5 1s linear infinite;
+}
+@-moz-keyframes rPassToken5 {
+        0% { -moz-transform: rotate(273deg); }
+        50% { -moz-transform: rotate(238deg); }
+        100% { -moz-transform: rotate(273deg); }
+    }
+@-webkit-keyframes rPassToken5 {
+        0% { -webkit-transform: rotate(273deg); }
+        50% { -webkit-transform: rotate(238deg); }
+        100% { -webkit-transform: rotate(273deg); }
+    }
+
+.lHandPassToken1 {
+    -webkit-animation:lPassToken1 1s linear infinite;
+    -moz-animation:lPassToken1 1s linear infinite;
+    animation:lPassToken1 1s linear infinite;
+}
+@-moz-keyframes lPassToken1 {
+        0% { -moz-transform: rotate(15deg); }
+        50% { -moz-transform: rotate(50deg); }
+        100% { -moz-transform: rotate(15deg); }
+    }
+@-webkit-keyframes lPassToken1 {
+        0% { -webkit-transform: rotate(15deg); }
+        50% { -webkit-transform: rotate(50deg); }
+        100% { -webkit-transform: rotate(15deg); }
+    }
+
+.lHandPassToken2 {
+    -webkit-animation:lPassToken2 1s linear infinite;
+    -moz-animation:lPassToken2 1s linear infinite;
+    animation:lPassToken2 1s linear infinite;
+}
+@-moz-keyframes lPassToken2 {
+        0% { -moz-transform: rotate(87deg); }
+        50% { -moz-transform: rotate(132deg); }
+        100% { -moz-transform: rotate(87deg); }
+    }
+@-webkit-keyframes lPassToken2 {
+        0% { -webkit-transform: rotate(87deg); }
+        50% { -webkit-transform: rotate(132deg); }
+        100% { -webkit-transform: rotate(87deg); }
+    }
+
+.lHandPassToken3 {
+    -webkit-animation:lPassToken3 1s linear infinite;
+    -moz-animation:lPassToken3 1s linear infinite;
+    animation:lPassToken3 1s linear infinite;
+}
+@-moz-keyframes lPassToken3 {
+        0% { -moz-transform: rotate(159deg); }
+        50% { -moz-transform: rotate(194deg); }
+        100% { -moz-transform: rotate(159deg); }
+    }
+@-webkit-keyframes lPassToken3 {
+        0% { -webkit-transform: rotate(159deg); }
+        50% { -webkit-transform: rotate(194deg); }
+        100% { -webkit-transform: rotate(159deg); }
+    }
+
+.lHandPassToken4 {
+    -webkit-animation:lPassToken4 1s linear infinite;
+    -moz-animation:lPassToken4 1s linear infinite;
+    animation:lPassToken4 1s linear infinite;
+}
+@-moz-keyframes lPassToken4 {
+        0% { -moz-transform: rotate(231deg); }
+        50% { -moz-transform: rotate(266deg); }
+        100% { -moz-transform: rotate(231deg); }
+    }
+@-webkit-keyframes lPassToken4 {
+        0% { -webkit-transform: rotate(231deg); }
+        50% { -webkit-transform: rotate(266deg); }
+        100% { -webkit-transform: rotate(231deg); }
+    }
+
+.lHandPassToken5 {
+    -webkit-animation:lPassToken5 1s linear infinite;
+    -moz-animation:lPassToken5 1s linear infinite;
+    animation:lPassToken5 1s linear infinite;
+}
+@-moz-keyframes lPassToken5 {
+        0% { -moz-transform: rotate(303deg); }
+        50% { -moz-transform: rotate(338deg); }
+        100% { -moz-transform: rotate(303deg); }
+    }
+@-webkit-keyframes lPassToken5 {
+        0% { -webkit-transform: rotate(303deg); }
+        50% { -webkit-transform: rotate(338deg); }
+        100% { -webkit-transform: rotate(303deg); }
+    }
