@@ -155,7 +155,7 @@ function codeLanguageComment(lang){
 		$("#code_correct_comment").html("<pre>"+
 			"/* number of philosophers */<br/>"+
 			"/* number of i’s left neighbor */<br/>"+
-			"/* number of i’s right neighbor */<br/>"+
+			"/* nnumber of i’s right neighbor */<br/>"+
 			"/* philosopher is thinking */<br/>"+
 			"/* philosopher is trying to get forks */<br/>"+
 			"/* philosopher is eating */<br/>"+
@@ -187,7 +187,7 @@ function codeLanguageComment(lang){
 			"/* i: philosopher number, from 0 to N−1 */<br/><br/>"+
 			"</pre>");
 		
-		$("#code p").html("<center><center>The algorithms to this page were taken from the book: "+
+		$("#code p").html("<center><center>The algorithms in this page were taken from the book: "+
 			"<br />TANENBAUM, Andrew S., Moderns Operating Systems, 3th.  <center>");
 
 		$("#code h2").html("<center>Nonsolution to the dining philosophers problem."+
@@ -209,15 +209,16 @@ function contentAbout(lang){
 
 	}
 	else{
-		$("#content_about").html("hi");
+		$("#content_about").html("This project was conceived and accomplished during the class Operating Systems I,"+
+		" 2015 Spring of Computer Engineering, University of São Paulo - São Carlos, under supervision of the professor Paulo Sérgio"+
+		" Lopes de Souza, <br/> by the students:<br /><br />");
 	}
 
 
 	$("#content_about").append("<img src='./img/Andressa.png' class='photo_img' />"+
 		 "<img src='./img/Jessika.png' 	class='photo_img' />"+
 		 "<img src='./img/Raphael.png' 	class='photo_img' /><br/>"+
-		 "<br class='clear' />"+
-		 "");
+		 "<br class='clear' />");
 }
 
 function contentSimulator(lang){
@@ -233,14 +234,14 @@ function legendContent(lang){
 	
     if (!lang){
     	$("#legend").html("<font color='blue'>"+
-    		"<ul> <li><font color='blue'> Filósofo pensando </font></li>"+
+    		"<ul> <font color='blue'> <li>Filósofo pensando </font></li>"+
     		"<font color='red'><li> Filósofo com fome</li> </font>"+
     		"<font color='green'> <li>Filósofo comendo</li>  </font></ul>");
     }
     else {
     	$("#legend").html("<font color='blue'>"+
-    		"<ul> <li><font color='blue'>Thinking philosopher</font></li>"+
-    		"<font color='red'><li>Hungry philosopher</li></font>"+
-    		"<font color='green'><li>Eating philosopher</li></font></ul>");
+    		"<ul> <font color='blue'><li> Thinking philosopher</font></li>"+
+    		"<font color='red'><li> Hungry philosopher</li> </font>"+
+    		"<font color='green'> <li>Eating philosopher </li>  </font></ul>");
     }
 }

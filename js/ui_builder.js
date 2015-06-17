@@ -231,17 +231,7 @@ jQuery(document).ready(function($){
 	});
 	
 	var character_photo = pageWidth*0.002;
-	$(".img_photo").css({
-    	width: character_photo
-    });
-
-
-	$("#about, #about pre").css({
-		fontSize: function(){
-			return character_photo*5;
-		}
-	});
-
+	
     var nav_button_left = pageWidth*(5.1/7);
     $("#prev").css("left",nav_button_left);
     $("#next").css("left",(nav_button_left+(philosopherWidth/2))*1.005);
@@ -273,16 +263,39 @@ jQuery(document).ready(function($){
 	$("#lhand4").css({"transform":"rotate("+(216+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+LHAND_ANGLE_OFFSET));
 	$("#lhand5").css({"transform":"rotate("+(288+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+LHAND_ANGLE_OFFSET));
 
-
+	contentAbout(0);
+	contentCode();
+	contentSimulator(0);
+	codeLanguageComment(0);
+	legendContent(0);
 	styleCode("code_error");
 	styleCode("code_correct");
+
+	$(".img_photo").css({
+    	width: function(){
+			return character_photo;
+		}
+    });
+
+
+	$("#about").css({
+		fontSize: function(){
+			return character_photo*5;
+		}
+	});
+
+	
+	
 });
+
+
 
 function setRotationCenter(){
 	$(".tableware > img").css({"transform-origin":""+(50)+"% "+(240)+"%"});
 	$(".philosopher").css({"transform-origin":""+(50)+"% "+(232)+"%"});
 	$(".hand").css({"transform-origin":""+(50)+"% "+(pageHeight/2 - philosopherHeight*0.35*3)+"px"});
 }
+
 
 function menuPositioning(){
 	$("#menuItems li").css({
@@ -305,6 +318,7 @@ function menuPositioning(){
 		}
 	});
 
+
 	$(".content_menu").css({
 		width: function(){
 			return pageWidth*0.6;
@@ -320,9 +334,5 @@ function menuPositioning(){
 		}
 	});
 
-	contentAbout(0);
-	contentCode();
-	contentSimulator(0);
-	codeLanguageComment(0);
-	legendContent(0)
+	
 }
