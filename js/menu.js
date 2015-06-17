@@ -2,8 +2,11 @@ function setLang(lang){
     language = lang;
     unsetFrame(currentFrame);
     setFrame(currentFrame);
+    
     contentSimulator(lang);
     codeLanguageComment(lang);
+    legendContent(lang);
+
     styleCode("code_error");
     styleCode("code_correct");
 

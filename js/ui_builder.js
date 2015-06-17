@@ -32,7 +32,6 @@ jQuery(document).ready(function($){
 	$("#header").css({
 		height: function(){
 			headerHeight = $("#fullpage").height() * HEADER_HEIGHT;
-
 			return headerHeight;
 		},
 		width: function(){
@@ -84,6 +83,23 @@ jQuery(document).ready(function($){
 		top: headerHeight * 3.5
 	});
 
+	$("#legend").css({
+		padding: function(){
+			return pageWidth*0.02;
+		},
+		top: function(){
+			return pageHeight*0.2;
+		},
+		right: function(){
+			return pageWidth*0.1;
+		},
+		fontSize: function(){
+			return pageWidth*0.01;
+		},
+	});
+
+	
+
 	var tableDiameter = (pageHeight*(6/10));
 
 	$("#table").css({
@@ -99,7 +115,7 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	$("#intro").css({
+	$("#intro, #end").css({
 		height: function(){
 			return pageHeight;
 		},
@@ -257,6 +273,7 @@ jQuery(document).ready(function($){
 	contentCode();
 	contentSimulator(0);
 	codeLanguageComment(0);
+	legendContent(0)
 	styleCode("code_error");
 	styleCode("code_correct");
 });
