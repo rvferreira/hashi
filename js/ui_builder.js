@@ -273,11 +273,7 @@ jQuery(document).ready(function($){
 	$("#lhand4").css({"transform":"rotate("+(216+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (216+LHAND_ANGLE_OFFSET));
 	$("#lhand5").css({"transform":"rotate("+(288+LHAND_ANGLE_OFFSET)+"deg)"}).data('rot', (288+LHAND_ANGLE_OFFSET));
 
-	contentAbout(0);
-	contentCode();
-	contentSimulator(0);
-	codeLanguageComment(0);
-	legendContent(0)
+
 	styleCode("code_error");
 	styleCode("code_correct");
 });
@@ -323,4 +319,10 @@ function menuPositioning(){
 			return (pageWidth*0.01);
 		}
 	});
+
+	contentAbout(0);
+	contentCode();
+	contentSimulator(0);
+	codeLanguageComment(0);
+	legendContent(0)
 }
