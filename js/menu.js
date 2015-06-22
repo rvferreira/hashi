@@ -35,7 +35,7 @@ function simulatorLink() {
 function aboutLink() {	
 	setObjectListInvisible(["#code"]);
 	setObjectListVisible(["#about"]);
-	//$("body").css("overflow-y","hidden");
+	$("#about").css("overflow-y","auto");
 }
 
 function codeLink() {	

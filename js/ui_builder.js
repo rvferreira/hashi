@@ -280,7 +280,7 @@ jQuery(document).ready(function($){
 
 	$("#about").css({
 		fontSize: function(){
-			return character_photo*5;
+			return character_photo*6;
 		}
 	});
 

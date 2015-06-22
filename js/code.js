@@ -218,6 +218,9 @@ function contentAbout(lang){
 	$("#content_about").append("<img src='./img/Andressa.png' class='photo_img' />"+
 		 "<img src='./img/Jessika.png' 	class='photo_img' />"+
 		 "<img src='./img/Raphael.png' 	class='photo_img' /><br/>"+
+		 "<br class='clear' />"+
+		 "<center><img src='./img/logoICMC.jpg'  class='photo_img' style='vertical-align:bottom;' />"+
+		 "<img src='./img/logoEESC.png' class='photo_img' /></center>"+
 		 "<br class='clear' />");
 }
 
